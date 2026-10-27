@@ -336,9 +336,10 @@ DOCUMENT = [
             ]),
             ("p",
              "The tool will wait until the phone is ready, tell you what it is waiting for, "
-             "and begin on its own. It keeps running with the screen off and will not be "
-             "interrupted by the phone's usual power saving. Expect it to take tens of "
-             "minutes and to leave the device warm."),
+             "and begin on its own. It keeps running with the screen off, protected from the "
+             "phone's usual power saving. Some phones go further and slow down work done with "
+             "the screen off; the next section but one covers that. Expect a run to take tens "
+             "of minutes and to leave the device warm."),
 
             ("h2", "Hearing how the cool-down is going"),
             ("p",
@@ -355,6 +356,19 @@ DOCUMENT = [
              "notification on the lock screen. The phone goes quiet once the measurement "
              "starts, so the speaking cannot affect the result. At the end it says the run "
              "has finished and what share of its speed the phone kept."),
+
+            ("h2", "Keeping the screen on"),
+            ("p",
+             "Normally the screen stays off, because the display warms the phone too. Some "
+             "phones, though, quietly hold back work done while the screen is off, and on "
+             "those a screen-off measurement reports the phone's power saving rather than its "
+             "chip. Chapter 9 shows a phone doing exactly that."),
+            ("p",
+             "To check, turn on <b>Keep the screen on, dimmed</b> under Preconditions when "
+             "setting up a run. The app then keeps the screen lit at its lowest brightness "
+             "for the whole run. Leave the app open and the phone untouched. If the speed is "
+             "very different from a screen-off run, the phone's power saving was "
+             "responsible."),
 
             ("h2", "The rigorous way"),
             ("p",
@@ -424,6 +438,49 @@ DOCUMENT = [
              "trade-off: more speed now, paid for in heat, with a decline still under way "
              "when the measurement ended. That is also why its settled speed reads as "
              "unavailable. It never levelled off, and the tool does not pretend it did."),
+
+            ("h2", "Two phones, one question"),
+            ("p",
+             "The same model and the same question on the main processor of two phones: the "
+             "Pixel 6 above and a newer Honor Magic V3. Both measurements were labelled "
+             "Valid."),
+            ("figure", "honor-vs-pixel-cpu.png",
+             "Gemma 3 1B on the main processor, unplugged with the screen off, 256-token "
+             "answers back to back. The Honor starts at 22.6 tokens a second, slows itself "
+             "after 2.1 minutes and holds 18.3 for the remaining 35 minutes: 81% of its "
+             "start. The Pixel starts at 16.8, slows at 5.6 minutes and ends at 14.2, 84% of "
+             "its start. The labels compare each phone's first ten answers with its last ten."),
+            ("p",
+             "Both phones slow down, and the newer one slows down sooner. It still finishes "
+             "29% faster, and it warmed its battery less (6.0 °C against 7.9 °C). The Honor's "
+             "line also flattens out completely, so for it the tool could report a settled "
+             "speed and a Retained figure: 76%. That figure is a little lower than the 81% on "
+             "the chart, because the tool's best speed came from a short burst about 30 "
+             "minutes in rather than from the start. It is a reminder to look at the graph as "
+             "well as the number."),
+
+            ("h2", "When the screen matters more than the heat"),
+            ("p",
+             "The same Honor, this time on its graphics chip, measured twice: once with the "
+             "screen off, as usual, and once with the screen kept on and dimmed."),
+            ("figure", "honor-gpu-screen-on-off.png",
+             "Gemma 3 1B on the Honor Magic V3's graphics chip. With the screen off, the "
+             "speed fell from about 31 to 3.3 tokens a second at 4.8 minutes and stayed there, "
+             "while the phone reported no overheating and its battery was cooling. With the "
+             "screen on, the phone got much hotter (its most severe warning level, battery at "
+             "40 °C) and still answered at about 31 tokens a second for all 20 minutes."),
+            ("p",
+             "If heat were to blame, the hotter run would be the slower one. It is the other "
+             "way round, so the collapse came from something tied to the screen being off, "
+             "most likely the phone's own power saving. For anyone building an app, that "
+             "means a task left running with the screen off on this phone could take about "
+             "nine times longer than testing suggests. For anyone measuring phones, it means "
+             "a screen-off result on this phone describes its power saving, not its chip."),
+            ("note",
+             "Both of these runs were labelled <b>Conditions not met</b>, because the phone "
+             "started each one a little warm. That does not change the comparison, but it "
+             "does mean neither speed should be quoted as the phone's figure until the pair "
+             "has been repeated from a cool start."),
 
             ("h2", "The trust label"),
             ("p",

@@ -333,7 +333,8 @@ DOCUMENT = [
                 ["Thermal headroom", "≥ 0.5 margin", "Continuous 0..1 signal, far richer than the coarse status enum."],
                 ["Unplugged", "required", "Charging is a heat source in its own right."],
                 ["Battery", "≥ 50%", "A low battery triggers its own independent throttling."],
-                ["Screen", "OFF", "Must be fixed rather than incidental; the panel is a heat source."],
+                ["Screen", "OFF", "Must be fixed rather than incidental; the panel is a heat source. "
+                 "The app can instead hold it on at minimum brightness (ON_DIMMED)."],
                 ["Stabilization", "30 s", "Conditions must hold continuously, not merely be true once."],
                 ["Maximum wait", "15 min", "Beyond this the gate times out rather than waiting forever."],
             ], [24, 20, 56]),
@@ -862,6 +863,72 @@ DOCUMENT = [
              "about 40% at the start, throttles at 5.6 minutes and raises the battery 7.9 °C; "
              "the GPU holds 99% of its peak and raises it 3.0 °C. A benchmark that stops after "
              "a minute reports the first fact and misses the second."),
+
+            ("h2", "A cross-device example: Honor Magic V3 against Pixel 6"),
+            ("p",
+             "The same model file (same size, same name), the same prompt and the same "
+             "MediaPipe release (0.10.35) on the CPU of an Honor Magic V3 (Snapdragon 8 Gen 3) "
+             "and the Pixel 6 above. Both runs are VALID: unplugged, screen off, 256-token "
+             "answers, 150 measured on the Honor and 70 on the Pixel."),
+            ("figure", "honor-vs-pixel-cpu.png",
+             "CPU decode throughput and battery temperature, Honor Magic V3 against Pixel 6. "
+             "The Honor opens at 22.6 tok/s (mean of the first ten answers), throttles to LIGHT "
+             "at 2.1 minutes and holds 18.3 tok/s for the remaining 35 minutes: 81% of its "
+             "opening, with the battery 6.0 °C warmer. The Pixel opens at 16.8, throttles at "
+             "5.6 minutes and ends at 14.2 (84%), 7.9 °C warmer. Line-end labels compare the "
+             "first and last ten answers, so both devices are measured the same way."),
+            ("p",
+             "The Honor throttles sooner but settles harder. It is the first run in this "
+             "document with a detected steady state (18.26 tok/s) and therefore a retention "
+             "ratio, 0.76. Two cautions apply when quoting it."),
+            ("bullets", [
+                "<b>The peak came late.</b> The analyzer's peak, 24.1 tok/s, is a burst of three "
+                "fast iterations about 30 minutes in, not the opening of the run, which never "
+                "went above 23.6. The best rolling-median window rules out a single lucky "
+                "iteration but not a short burst, so the retention ratio is lower than the "
+                "opening-to-closing figure (0.76 against 0.81). Read the chart, not only the "
+                "ratio.",
+                "<b>The two runs took different paths.</b> The Pixel ran in the headless "
+                "harness; the Honor ran from the app with its live chart on, because Honor's "
+                "power manager defeats the harness (see chapter 10). "
+                "<font face='Courier'>executionPath</font> and "
+                "<font face='Courier'>liveChartEnabled</font> record this in each document. "
+                "The chart's observer effect works against the Honor, so its lead is, if "
+                "anything, understated.",
+            ]),
+
+            ("h2", "A collapse that is not thermal: the Honor GPU, screen off and on"),
+            ("p",
+             "The GPU of the same Honor, the same model and prompt, run twice: once with the "
+             "screen off, as the default policy requires, and once with the app holding the "
+             "screen on at minimum brightness (screen policy ON_DIMMED)."),
+            ("figure", "honor-gpu-screen-on-off.png",
+             "Gemma 3 1B on the Honor Magic V3 GPU. Screen off: about 31 tok/s until 4.8 "
+             "minutes, then 3.3 tok/s for the rest of the run, with thermal status NONE "
+             "throughout and the battery cooling from 33 to 28 °C. The run reached only 64 of "
+             "150 iterations before its time limit. Screen on: a median of 30.9 tok/s for all "
+             "150 iterations in 20 minutes, with thermal status SEVERE from 2.3 minutes and "
+             "the battery at 40 °C. Both runs started warmer than the gate allows and are "
+             "PRECONDITIONS_UNMET."),
+            ("p",
+             "Temperature cannot explain this. The cooler run lost 90% of its throughput in "
+             "one iteration and never recovered; the hotter run kept going. Prefill fell from "
+             "about 430 to about 50 tok/s at the same moment and time-to-first-token rose from "
+             "0.3 s to 2–3 s, so the whole GPU workload slowed, not one phase of it. The "
+             "battery history shows no event at that moment and the GPU clock is not readable "
+             "on this device, so the mechanism is unconfirmed. The pattern, a cap that arrives "
+             "a fixed time after the screen goes off whatever the temperature, points to the "
+             "vendor's power management rather than to thermal control."),
+            ("p",
+             "The screen-on run shows the thermal controller at work. Its bursts back to about "
+             "40 tok/s, at roughly 3.5, 6, 8, 10.5 and 19 minutes, each follow a transition from "
+             "SEVERE down to MODERATE in the thermal timeline: the platform relaxes its limit, "
+             "the GPU speeds up, the device heats, and the limit returns."),
+            ("note",
+             "<b>Neither number is the Honor's GPU benchmark.</b> Both runs are "
+             "PRECONDITIONS_UNMET, and the screen-on run adds the display's own heat. What the "
+             "pair does establish is that on this phone a screen-off result measures the power "
+             "manager, not the GPU. Repeat both from a cold start before quoting a figure."),
         ],
     },
 
@@ -922,6 +989,23 @@ DOCUMENT = [
              "at the start of the run (<font face='Courier'>adb logcat -s ThermalBench</font>). "
              "The app needs no such step: it starts its foreground service from the screen "
              "you tap."),
+            ("p",
+             "Honor phones go further. Their power manager cancels an app's partial wake lock "
+             "about two seconds after the screen goes off on battery, and gives it back when "
+             "a charger is connected. The battery history shows it "
+             "(<font face='Courier'>dumpsys batterystats --history</font>, "
+             "<font face='Courier'>-longwake</font> and <font face='Courier'>-running</font> "
+             "entries). With its wake lock gone, the harness stalls at the precondition gate "
+             "and the run never starts. The app, granted the same "
+             "<font face='Courier'>RUN_ANY_IN_BACKGROUND</font> permission and exempted from "
+             "battery optimisation, keeps its lock and completes."),
+            ("p",
+             "Completing is not the same as measuring the chip. On the same Honor, a GPU run "
+             "with the screen off slowed tenfold after about five minutes while the phone was "
+             "cooling; with the screen held on it did not (chapter 9). On Honor, use the app, "
+             "and when a GPU result looks wrong, run it again with "
+             "<b>Keep the screen on, dimmed</b>. If the two differ, the screen-off number "
+             "belongs to the power manager."),
 
             ("h2", "Instrumentation arguments"),
             ("table", [
@@ -1007,6 +1091,21 @@ DOCUMENT = [
              "A wake lock is held for the whole run and released in a "
              "<font face='Courier'>finally</font> block. It affects power draw, so the result "
              "document records that it was held."),
+
+            ("h2", "Screen-on runs"),
+            ("p",
+             "The composer's <b>Keep the screen on, dimmed</b> switch writes screen policy "
+             "<font face='Courier'>ON_DIMMED</font> into the spec. The gate then waits for the "
+             "screen to be on instead of off, and while the run waits or runs the app sets "
+             "<font face='Courier'>FLAG_KEEP_SCREEN_ON</font> and forces the window to 1% "
+             "brightness, so the run cannot time out into a screen-off one halfway through. "
+             "The app has to stay in front for that to hold."),
+            ("p",
+             "Screen-off stays the default because the panel is a heat source. The switch is a "
+             "diagnostic: on phones whose power manager holds back screen-off work, a pair of "
+             "runs that differ only in this setting separates the power manager's effect from "
+             "the chip's. The result document's <font face='Courier'>screenPolicy</font> field "
+             "says which one a result is."),
 
             ("h2", "The live chart caveat"),
             ("p",
