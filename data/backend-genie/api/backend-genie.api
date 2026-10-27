@@ -1,0 +1,36 @@
+public final class com/thermalbench/backend/genie/BuildConfig {
+	public static final field BUILD_TYPE Ljava/lang/String;
+	public static final field DEBUG Z
+	public static final field LIBRARY_PACKAGE_NAME Ljava/lang/String;
+	public static final field QAIRT_VERSION Ljava/lang/String;
+	public fun <init> ()V
+}
+
+public final class com/thermalbench/backend/genie/GenieBackend : com/thermalbench/domain/port/InferenceBackend {
+	public static final field ADSP_LIBRARY_PATH Ljava/lang/String;
+	public static final field DEFAULT_MAX_TOKENS I
+	public static final field TRACE_PREFIX Ljava/lang/String;
+	public fun <init> (Landroid/content/Context;Lcom/thermalbench/domain/port/MonotonicClock;Lcom/thermalbench/backend/api/ModelFiles;)V
+	public fun capabilities (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun generate (Lcom/thermalbench/domain/model/LoadedModel;Lcom/thermalbench/domain/model/Workload;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun getId-XTnkX30 ()Ljava/lang/String;
+	public fun load (Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun unload (Lcom/thermalbench/domain/model/LoadedModel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/backend/genie/GenieBackend_Factory : dagger/internal/Factory {
+	public static fun create (Ldagger/internal/Provider;Ldagger/internal/Provider;Ldagger/internal/Provider;)Lcom/thermalbench/backend/genie/GenieBackend_Factory;
+	public fun get ()Lcom/thermalbench/backend/genie/GenieBackend;
+	public synthetic fun get ()Ljava/lang/Object;
+	public static fun newInstance (Landroid/content/Context;Lcom/thermalbench/domain/port/MonotonicClock;Lcom/thermalbench/backend/api/ModelFiles;)Lcom/thermalbench/backend/genie/GenieBackend;
+}
+
+public abstract class com/thermalbench/backend/genie/GenieModule {
+	public fun <init> ()V
+	public abstract fun backend (Lcom/thermalbench/backend/genie/GenieBackend;)Lcom/thermalbench/domain/port/InferenceBackend;
+}
+
+public class hilt_aggregated_deps/_com_thermalbench_backend_genie_GenieModule {
+	public fun <init> ()V
+}
+

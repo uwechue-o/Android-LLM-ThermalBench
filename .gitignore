@@ -1,0 +1,29 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+**/build/
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.log
+/keystore/
+**/schemas/*.tmp
+/.kotlin/
+
+# DOCS build scratch (the manual PDF itself is committed)
+DOCS/.manual-pass1.pdf
+DOCS/__pycache__/
+
+# Screenshots kept in the project root while working
+/*.png
+/hf.pdf
+/stuff.txt
+/DOCS/pixel6-sustained.png

@@ -1,0 +1,15 @@
+{
+  "uniqueId": "ggml-org:llama.cpp",
+  "artifactVersion": "b11879",
+  "name": "llama.cpp and ggml",
+  "description": "LLM inference in C/C++. Compiled into the app as its GGUF backend, with ggml's CPU, Vulkan and OpenCL backends.",
+  "website": "https://github.com/ggml-org/llama.cpp",
+  "developers": [
+    {
+      "name": "The ggml authors"
+    }
+  ],
+  "licenses": [
+    "llama-cpp-mit"
+  ]
+}

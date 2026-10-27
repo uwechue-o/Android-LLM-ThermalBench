@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ThermalBench</string>
+    <string name="abort">Abort</string>
+
+    <string name="run_notification_channel">Benchmark run</string>
+    <string name="run_notification_title">ThermalBench run in progress</string>
+    <string name="run_notification_preparing">Preparing…</string>
+    <string name="run_notification_running">Iteration %1$d of %2$d</string>
+</resources>

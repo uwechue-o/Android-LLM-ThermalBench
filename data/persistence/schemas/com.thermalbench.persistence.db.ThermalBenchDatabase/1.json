@@ -1,0 +1,463 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5085f09c3f48c1f8efd9a3cea345664a",
+    "entities": [
+      {
+        "tableName": "runs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`resultId` TEXT NOT NULL, `specId` TEXT NOT NULL, `label` TEXT NOT NULL, `deviceModel` TEXT NOT NULL, `backendId` TEXT NOT NULL, `delegate` TEXT NOT NULL, `modelName` TEXT NOT NULL, `startedAtEpochMillis` INTEGER NOT NULL, `measuredIterations` INTEGER NOT NULL, `retentionRatio` REAL, `validity` TEXT, `terminated` TEXT NOT NULL, `documentFileName` TEXT, `complete` INTEGER NOT NULL, PRIMARY KEY(`resultId`))",
+        "fields": [
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "specId",
+            "columnName": "specId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "deviceModel",
+            "columnName": "deviceModel",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "backendId",
+            "columnName": "backendId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "delegate",
+            "columnName": "delegate",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "modelName",
+            "columnName": "modelName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startedAtEpochMillis",
+            "columnName": "startedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "measuredIterations",
+            "columnName": "measuredIterations",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "retentionRatio",
+            "columnName": "retentionRatio",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "validity",
+            "columnName": "validity",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "terminated",
+            "columnName": "terminated",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "documentFileName",
+            "columnName": "documentFileName",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "complete",
+            "columnName": "complete",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "resultId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_runs_specId",
+            "unique": false,
+            "columnNames": [
+              "specId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_runs_specId` ON `${TABLE_NAME}` (`specId`)"
+          },
+          {
+            "name": "index_runs_startedAtEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "startedAtEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_runs_startedAtEpochMillis` ON `${TABLE_NAME}` (`startedAtEpochMillis`)"
+          }
+        ]
+      },
+      {
+        "tableName": "iteration_samples",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`resultId` TEXT NOT NULL, `iterationIndex` INTEGER NOT NULL, `phase` TEXT NOT NULL, `startElapsedNanos` INTEGER NOT NULL, `endElapsedNanos` INTEGER NOT NULL, `timeToFirstTokenMicros` INTEGER NOT NULL, `prefillTokensPerSecond` REAL NOT NULL, `decodeTokensPerSecond` REAL NOT NULL, `promptTokenCount` INTEGER NOT NULL, `outputTokenCount` INTEGER NOT NULL, `thermalStatusAtStart` TEXT NOT NULL, `thermalStatusAtEnd` TEXT NOT NULL, `thermalHeadroomAtStart` REAL, `batteryTemperatureDeciC` INTEGER, `batteryPercent` INTEGER NOT NULL, `cpuFrequenciesKhz` TEXT, `peakRssBytes` INTEGER NOT NULL, `throttleObserved` INTEGER NOT NULL, PRIMARY KEY(`resultId`, `iterationIndex`))",
+        "fields": [
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "index",
+            "columnName": "iterationIndex",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "phase",
+            "columnName": "phase",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "startElapsedNanos",
+            "columnName": "startElapsedNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endElapsedNanos",
+            "columnName": "endElapsedNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timeToFirstTokenMicros",
+            "columnName": "timeToFirstTokenMicros",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "prefillTokensPerSecond",
+            "columnName": "prefillTokensPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "decodeTokensPerSecond",
+            "columnName": "decodeTokensPerSecond",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "promptTokenCount",
+            "columnName": "promptTokenCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputTokenCount",
+            "columnName": "outputTokenCount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thermalStatusAtStart",
+            "columnName": "thermalStatusAtStart",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thermalStatusAtEnd",
+            "columnName": "thermalStatusAtEnd",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thermalHeadroomAtStart",
+            "columnName": "thermalHeadroomAtStart",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "batteryTemperatureDeciC",
+            "columnName": "batteryTemperatureDeciC",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "batteryPercent",
+            "columnName": "batteryPercent",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cpuFrequenciesKhz",
+            "columnName": "cpuFrequenciesKhz",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "peakRssBytes",
+            "columnName": "peakRssBytes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "throttleObserved",
+            "columnName": "throttleObserved",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "resultId",
+            "iterationIndex"
+          ]
+        }
+      },
+      {
+        "tableName": "thermal_samples",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `resultId` TEXT NOT NULL, `elapsedNanos` INTEGER NOT NULL, `status` TEXT NOT NULL, `headroom` REAL, `batteryTemperatureDeciC` INTEGER, `cpuFrequenciesKhz` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "elapsedNanos",
+            "columnName": "elapsedNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "headroom",
+            "columnName": "headroom",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "batteryTemperatureDeciC",
+            "columnName": "batteryTemperatureDeciC",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "cpuFrequenciesKhz",
+            "columnName": "cpuFrequenciesKhz",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_thermal_samples_resultId",
+            "unique": false,
+            "columnNames": [
+              "resultId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_thermal_samples_resultId` ON `${TABLE_NAME}` (`resultId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "thermal_transitions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `resultId` TEXT NOT NULL, `elapsedNanos` INTEGER NOT NULL, `fromStatus` TEXT NOT NULL, `toStatus` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "elapsedNanos",
+            "columnName": "elapsedNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fromStatus",
+            "columnName": "fromStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "toStatus",
+            "columnName": "toStatus",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_thermal_transitions_resultId",
+            "unique": false,
+            "columnNames": [
+              "resultId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_thermal_transitions_resultId` ON `${TABLE_NAME}` (`resultId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "power_samples",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `resultId` TEXT NOT NULL, `elapsedNanos` INTEGER NOT NULL, `batteryPercent` INTEGER NOT NULL, `currentNowMicroAmps` INTEGER, `chargeCounterMicroAh` INTEGER, `voltageMillivolts` INTEGER, `plugged` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "resultId",
+            "columnName": "resultId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "elapsedNanos",
+            "columnName": "elapsedNanos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "batteryPercent",
+            "columnName": "batteryPercent",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "currentNowMicroAmps",
+            "columnName": "currentNowMicroAmps",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "chargeCounterMicroAh",
+            "columnName": "chargeCounterMicroAh",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "voltageMillivolts",
+            "columnName": "voltageMillivolts",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "plugged",
+            "columnName": "plugged",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_power_samples_resultId",
+            "unique": false,
+            "columnNames": [
+              "resultId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_power_samples_resultId` ON `${TABLE_NAME}` (`resultId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "specs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`specId` TEXT NOT NULL, `label` TEXT NOT NULL, `document` TEXT NOT NULL, `savedAtEpochMillis` INTEGER NOT NULL, PRIMARY KEY(`specId`))",
+        "fields": [
+          {
+            "fieldPath": "specId",
+            "columnName": "specId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "document",
+            "columnName": "document",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "savedAtEpochMillis",
+            "columnName": "savedAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "specId"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '5085f09c3f48c1f8efd9a3cea345664a')"
+    ]
+  }
+}

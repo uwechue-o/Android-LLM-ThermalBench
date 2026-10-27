@@ -1,0 +1,897 @@
+public final class com/thermalbench/schema/BackendRefDocument {
+	public static final field Companion Lcom/thermalbench/schema/BackendRefDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)Lcom/thermalbench/schema/BackendRefDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/BackendRefDocument;Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;ILjava/lang/Object;)Lcom/thermalbench/schema/BackendRefDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelegate ()Ljava/lang/String;
+	public final fun getId ()Ljava/lang/String;
+	public final fun getOptions ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/BackendRefDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/BackendRefDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/BackendRefDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/BackendRefDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/BackendRefDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/CanonicalJson {
+	public static final field INSTANCE Lcom/thermalbench/schema/CanonicalJson;
+	public final fun encode (Lkotlinx/serialization/json/JsonElement;)Ljava/lang/String;
+	public final fun formatDouble (D)Ljava/lang/String;
+	public final fun formatNumber (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/thermalbench/schema/DecayFitDocument {
+	public static final field Companion Lcom/thermalbench/schema/DecayFitDocument$Companion;
+	public fun <init> (DDDD)V
+	public final fun component1 ()D
+	public final fun component2 ()D
+	public final fun component3 ()D
+	public final fun component4 ()D
+	public final fun copy (DDDD)Lcom/thermalbench/schema/DecayFitDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/DecayFitDocument;DDDDILjava/lang/Object;)Lcom/thermalbench/schema/DecayFitDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmplitude ()D
+	public final fun getAsymptote ()D
+	public final fun getRSquared ()D
+	public final fun getTimeConstantSeconds ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/DecayFitDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/DecayFitDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/DecayFitDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/DecayFitDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DecayFitDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DegradationProfileDocument {
+	public static final field Companion Lcom/thermalbench/schema/DegradationProfileDocument$Companion;
+	public fun <init> (DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Long;Ljava/lang/Integer;Lcom/thermalbench/schema/DecayFitDocument;DLjava/util/List;Ljava/lang/String;Ljava/lang/String;IDDLjava/lang/Integer;Ljava/lang/Integer;)V
+	public synthetic fun <init> (DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Long;Ljava/lang/Integer;Lcom/thermalbench/schema/DecayFitDocument;DLjava/util/List;Ljava/lang/String;Ljava/lang/String;IDDLjava/lang/Integer;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()D
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()I
+	public final fun component12 ()D
+	public final fun component13 ()D
+	public final fun component14 ()Ljava/lang/Integer;
+	public final fun component15 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/Double;
+	public final fun component3 ()Ljava/lang/Double;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Lcom/thermalbench/schema/DecayFitDocument;
+	public final fun component7 ()D
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Long;Ljava/lang/Integer;Lcom/thermalbench/schema/DecayFitDocument;DLjava/util/List;Ljava/lang/String;Ljava/lang/String;IDDLjava/lang/Integer;Ljava/lang/Integer;)Lcom/thermalbench/schema/DegradationProfileDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/DegradationProfileDocument;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Long;Ljava/lang/Integer;Lcom/thermalbench/schema/DecayFitDocument;DLjava/util/List;Ljava/lang/String;Ljava/lang/String;IDDLjava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lcom/thermalbench/schema/DegradationProfileDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryDrainPercent ()Ljava/lang/Integer;
+	public final fun getBatteryTemperatureRiseDeciC ()Ljava/lang/Integer;
+	public final fun getDecayModel ()Lcom/thermalbench/schema/DecayFitDocument;
+	public final fun getIterationsToFirstThrottle ()Ljava/lang/Integer;
+	public final fun getMeanDecodeTokensPerSecond ()D
+	public final fun getMeasuredIterationCount ()I
+	public final fun getMinDecodeTokensPerSecond ()D
+	public final fun getPeakDecodeTokensPerSecond ()D
+	public final fun getRetentionRatio ()Ljava/lang/Double;
+	public final fun getSteadyStateTokensPerSecond ()Ljava/lang/Double;
+	public final fun getTerminated ()Ljava/lang/String;
+	public final fun getThrottleEvents ()Ljava/util/List;
+	public final fun getTimeToFirstThrottleMillis ()Ljava/lang/Long;
+	public final fun getTtftDriftMicrosPerIteration ()D
+	public final fun getValidity ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/DegradationProfileDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/DegradationProfileDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/DegradationProfileDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/DegradationProfileDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DegradationProfileDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DeviceConditionsDocument {
+	public static final field Companion Lcom/thermalbench/schema/DeviceConditionsDocument$Companion;
+	public fun <init> (JLjava/lang/String;Ljava/lang/Float;IZZLjava/lang/Integer;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/Float;IZZLjava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()I
+	public final fun component5 ()Z
+	public final fun component6 ()Z
+	public final fun component7 ()Ljava/lang/Integer;
+	public final fun copy (JLjava/lang/String;Ljava/lang/Float;IZZLjava/lang/Integer;)Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/DeviceConditionsDocument;JLjava/lang/String;Ljava/lang/Float;IZZLjava/lang/Integer;ILjava/lang/Object;)Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getElapsedNanos ()J
+	public final fun getPlugged ()Z
+	public final fun getScreenOn ()Z
+	public final fun getThermalHeadroom ()Ljava/lang/Float;
+	public final fun getThermalStatus ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/DeviceConditionsDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/DeviceConditionsDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/DeviceConditionsDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DeviceConditionsDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DeviceDescriptorDocument {
+	public static final field Companion Lcom/thermalbench/schema/DeviceDescriptorDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component12 ()I
+	public final fun component13 ()J
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Z
+	public final fun component16 ()Z
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Z
+	public final fun component19 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()I
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;)Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/DeviceDescriptorDocument;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;ILjava/lang/Object;)Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAbis ()Ljava/util/List;
+	public final fun getAndroidRelease ()Ljava/lang/String;
+	public final fun getAnonymousDeviceId ()Ljava/lang/String;
+	public final fun getBoard ()Ljava/lang/String;
+	public final fun getCpuCoreCount ()I
+	public final fun getCpuFrequencyReadable ()Z
+	public final fun getCpuMaxFrequenciesKhz ()Ljava/util/List;
+	public final fun getDevice ()Ljava/lang/String;
+	public final fun getGpuFrequencyReadable ()Z
+	public final fun getHardware ()Ljava/lang/String;
+	public final fun getManufacturer ()Ljava/lang/String;
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getSdkInt ()I
+	public final fun getSecurityPatch ()Ljava/lang/String;
+	public final fun getSocManufacturer ()Ljava/lang/String;
+	public final fun getSocModel ()Ljava/lang/String;
+	public final fun getThermalHeadroomSupported ()Z
+	public final fun getThermalSensorNames ()Ljava/util/List;
+	public final fun getTotalRamBytes ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/DeviceDescriptorDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/DeviceDescriptorDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/DeviceDescriptorDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/DeviceDescriptorDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/Fixtures {
+	public static final field INSTANCE Lcom/thermalbench/schema/Fixtures;
+	public static final field REFERENCE_OUTPUT_TOKENS I
+	public static final field REFERENCE_PROMPT_TOKENS I
+	public final fun getREFERENCE_PROMPT ()Ljava/lang/String;
+	public final fun getTOOL_VERSION ()Lcom/thermalbench/domain/model/SemVer;
+	public final fun placeholderModel (Lcom/thermalbench/domain/model/ModelFormat;)Lcom/thermalbench/domain/model/ModelRef;
+	public static synthetic fun placeholderModel$default (Lcom/thermalbench/schema/Fixtures;Lcom/thermalbench/domain/model/ModelFormat;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ModelRef;
+	public final fun referenceWorkload (I)Lcom/thermalbench/domain/model/Workload;
+	public static synthetic fun referenceWorkload$default (Lcom/thermalbench/schema/Fixtures;IILjava/lang/Object;)Lcom/thermalbench/domain/model/Workload;
+	public final fun spec-ppTzCRk (Lcom/thermalbench/domain/model/ModelRef;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;Lcom/thermalbench/domain/model/Workload;JLjava/lang/String;Ljava/util/Map;Lcom/thermalbench/schema/JsonResultCodec;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public static synthetic fun spec-ppTzCRk$default (Lcom/thermalbench/schema/Fixtures;Lcom/thermalbench/domain/model/ModelRef;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;Lcom/thermalbench/domain/model/Workload;JLjava/lang/String;Ljava/util/Map;Lcom/thermalbench/schema/JsonResultCodec;ILjava/lang/Object;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+}
+
+public final class com/thermalbench/schema/IterationSampleDocument {
+	public static final field Companion Lcom/thermalbench/schema/IterationSampleDocument$Companion;
+	public fun <init> (ILjava/lang/String;JJJDDIILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;)V
+	public synthetic fun <init> (ILjava/lang/String;JJJDDIILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Ljava/lang/Float;
+	public final fun component13 ()Ljava/lang/Integer;
+	public final fun component14 ()I
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()J
+	public final fun component17 ()Z
+	public final fun component18 ()Ljava/lang/Long;
+	public final fun component19 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun component5 ()J
+	public final fun component6 ()D
+	public final fun component7 ()D
+	public final fun component8 ()I
+	public final fun component9 ()I
+	public final fun copy (ILjava/lang/String;JJJDDIILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;)Lcom/thermalbench/schema/IterationSampleDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/IterationSampleDocument;ILjava/lang/String;JJJDDIILjava/lang/String;Ljava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/schema/IterationSampleDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getCpuFrequenciesKhz ()Ljava/util/List;
+	public final fun getDecodeTokensPerSecond ()D
+	public final fun getEndElapsedNanos ()J
+	public final fun getGpuFrequencyKhz ()Ljava/lang/Long;
+	public final fun getIndex ()I
+	public final fun getOutputTokenCount ()I
+	public final fun getPeakRssBytes ()J
+	public final fun getPhase ()Ljava/lang/String;
+	public final fun getPrefillTokensPerSecond ()D
+	public final fun getPromptTokenCount ()I
+	public final fun getSensorTemperatures ()Ljava/util/List;
+	public final fun getStartElapsedNanos ()J
+	public final fun getThermalHeadroomAtStart ()Ljava/lang/Float;
+	public final fun getThermalStatusAtEnd ()Ljava/lang/String;
+	public final fun getThermalStatusAtStart ()Ljava/lang/String;
+	public final fun getThrottleObserved ()Z
+	public final fun getTimeToFirstTokenMicros ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/IterationSampleDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/IterationSampleDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/IterationSampleDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/IterationSampleDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/IterationSampleDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/JsonResultCodec : com/thermalbench/domain/port/ResultCodec {
+	public static final field Companion Lcom/thermalbench/schema/JsonResultCodec$Companion;
+	public static final field RESULT_ID_LENGTH I
+	public static final field SPEC_ID_LENGTH I
+	public fun <init> ()V
+	public fun decodeResult (Ljava/lang/String;)Lcom/thermalbench/domain/model/BenchmarkResult;
+	public fun decodeSpec (Ljava/lang/String;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public final fun deriveResultId-lnR4xp8 (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public fun encodeResult (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public fun encodeSpec (Lcom/thermalbench/domain/model/BenchmarkSpec;)Ljava/lang/String;
+	public final fun getJson ()Lkotlinx/serialization/json/Json;
+	public fun resultCsv (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public fun specDigest (Lcom/thermalbench/domain/model/BenchmarkSpec;)Ljava/lang/String;
+	public final fun verifyId (Lcom/thermalbench/domain/model/BenchmarkSpec;)Z
+	public final fun withDerivedId (Lcom/thermalbench/domain/model/BenchmarkSpec;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+}
+
+public final class com/thermalbench/schema/JsonResultCodec$Companion {
+	public final fun sha256-OKa6wEE (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public final class com/thermalbench/schema/Mappers {
+	public static final field INSTANCE Lcom/thermalbench/schema/Mappers;
+	public final fun toDocument (Lcom/thermalbench/domain/model/BenchmarkResult;)Lcom/thermalbench/schema/ResultDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/BenchmarkSpec;)Lcom/thermalbench/schema/SpecDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/DegradationProfile;)Lcom/thermalbench/schema/DegradationProfileDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/DeviceConditions;)Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/DeviceDescriptor;)Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/IterationSample;)Lcom/thermalbench/schema/IterationSampleDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/PowerSample;)Lcom/thermalbench/schema/PowerSampleDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/RunEnvironment;)Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/SensorTemperature;)Lcom/thermalbench/schema/SensorTemperatureDocument;
+	public final fun toDocument (Lcom/thermalbench/domain/model/ThermalTimeline;)Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public final fun toDomain (Lcom/thermalbench/schema/DegradationProfileDocument;)Lcom/thermalbench/domain/model/DegradationProfile;
+	public final fun toDomain (Lcom/thermalbench/schema/DeviceConditionsDocument;)Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun toDomain (Lcom/thermalbench/schema/DeviceDescriptorDocument;)Lcom/thermalbench/domain/model/DeviceDescriptor;
+	public final fun toDomain (Lcom/thermalbench/schema/IterationSampleDocument;)Lcom/thermalbench/domain/model/IterationSample;
+	public final fun toDomain (Lcom/thermalbench/schema/PowerSampleDocument;)Lcom/thermalbench/domain/model/PowerSample;
+	public final fun toDomain (Lcom/thermalbench/schema/ResultDocument;)Lcom/thermalbench/domain/model/BenchmarkResult;
+	public final fun toDomain (Lcom/thermalbench/schema/RunEnvironmentDocument;)Lcom/thermalbench/domain/model/RunEnvironment;
+	public final fun toDomain (Lcom/thermalbench/schema/SensorTemperatureDocument;)Lcom/thermalbench/domain/model/SensorTemperature;
+	public final fun toDomain (Lcom/thermalbench/schema/SpecDocument;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public final fun toDomain (Lcom/thermalbench/schema/ThermalTimelineDocument;)Lcom/thermalbench/domain/model/ThermalTimeline;
+}
+
+public final class com/thermalbench/schema/ModelRefDocument {
+	public static final field Companion Lcom/thermalbench/schema/ModelRefDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()J
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lcom/thermalbench/schema/ModelRefDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ModelRefDocument;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;ILjava/lang/Object;)Lcom/thermalbench/schema/ModelRefDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFormat ()Ljava/lang/String;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getParameterCount ()Ljava/lang/Long;
+	public final fun getPath ()Ljava/lang/String;
+	public final fun getQuantization ()Ljava/lang/String;
+	public final fun getSha256 ()Ljava/lang/String;
+	public final fun getSizeBytes ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ModelRefDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ModelRefDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ModelRefDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ModelRefDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ModelRefDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/PowerSampleDocument {
+	public static final field Companion Lcom/thermalbench/schema/PowerSampleDocument$Companion;
+	public fun <init> (JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;Z)V
+	public synthetic fun <init> (JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Z
+	public final fun copy (JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;Z)Lcom/thermalbench/schema/PowerSampleDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/PowerSampleDocument;JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;ZILjava/lang/Object;)Lcom/thermalbench/schema/PowerSampleDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getChargeCounterMicroAh ()Ljava/lang/Long;
+	public final fun getCurrentNowMicroAmps ()Ljava/lang/Long;
+	public final fun getElapsedNanos ()J
+	public final fun getPlugged ()Z
+	public final fun getVoltageMillivolts ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/PowerSampleDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/PowerSampleDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/PowerSampleDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/PowerSampleDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/PowerSampleDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/PreconditionPolicyDocument {
+	public static final field Companion Lcom/thermalbench/schema/PreconditionPolicyDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/Float;ZILjava/lang/String;JJ)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Float;ZILjava/lang/String;JJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Float;
+	public final fun component3 ()Z
+	public final fun component4 ()I
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()J
+	public final fun component7 ()J
+	public final fun copy (Ljava/lang/String;Ljava/lang/Float;ZILjava/lang/String;JJ)Lcom/thermalbench/schema/PreconditionPolicyDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/PreconditionPolicyDocument;Ljava/lang/String;Ljava/lang/Float;ZILjava/lang/String;JJILjava/lang/Object;)Lcom/thermalbench/schema/PreconditionPolicyDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxWaitForPreconditionsMillis ()J
+	public final fun getMinBatteryPercent ()I
+	public final fun getMinThermalHeadroom ()Ljava/lang/Float;
+	public final fun getRequireUnplugged ()Z
+	public final fun getRequiredThermalStatus ()Ljava/lang/String;
+	public final fun getScreenPolicy ()Ljava/lang/String;
+	public final fun getStabilizationWindowMillis ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/PreconditionPolicyDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/PreconditionPolicyDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/PreconditionPolicyDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/PreconditionPolicyDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/PreconditionPolicyDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ResultCsv {
+	public static final field INSTANCE Lcom/thermalbench/schema/ResultCsv;
+	public final fun getITERATION_HEADER ()Ljava/util/List;
+	public final fun getTHERMAL_HEADER ()Ljava/util/List;
+	public final fun iterations (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public final fun thermalTimeline (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+}
+
+public final class com/thermalbench/schema/ResultDocument {
+	public static final field Companion Lcom/thermalbench/schema/ResultDocument$Companion;
+	public static final field SCHEMA_URI Ljava/lang/String;
+	public fun <init> (Ljava/lang/String;ILjava/lang/String;Lcom/thermalbench/schema/SpecDocument;Lcom/thermalbench/schema/DeviceDescriptorDocument;Lcom/thermalbench/schema/RunEnvironmentDocument;JLjava/util/List;Lcom/thermalbench/schema/ThermalTimelineDocument;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/DegradationProfileDocument;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;ILjava/lang/String;Lcom/thermalbench/schema/SpecDocument;Lcom/thermalbench/schema/DeviceDescriptorDocument;Lcom/thermalbench/schema/RunEnvironmentDocument;JLjava/util/List;Lcom/thermalbench/schema/ThermalTimelineDocument;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/DegradationProfileDocument;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/util/List;
+	public final fun component11 ()Ljava/lang/String;
+	public final fun component12 ()Ljava/lang/String;
+	public final fun component13 ()Lcom/thermalbench/schema/DegradationProfileDocument;
+	public final fun component14 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lcom/thermalbench/schema/SpecDocument;
+	public final fun component5 ()Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public final fun component6 ()Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public final fun component7 ()J
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public final fun copy (Ljava/lang/String;ILjava/lang/String;Lcom/thermalbench/schema/SpecDocument;Lcom/thermalbench/schema/DeviceDescriptorDocument;Lcom/thermalbench/schema/RunEnvironmentDocument;JLjava/util/List;Lcom/thermalbench/schema/ThermalTimelineDocument;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/DegradationProfileDocument;Ljava/lang/String;)Lcom/thermalbench/schema/ResultDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ResultDocument;Ljava/lang/String;ILjava/lang/String;Lcom/thermalbench/schema/SpecDocument;Lcom/thermalbench/schema/DeviceDescriptorDocument;Lcom/thermalbench/schema/RunEnvironmentDocument;JLjava/util/List;Lcom/thermalbench/schema/ThermalTimelineDocument;Ljava/util/List;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/DegradationProfileDocument;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/ResultDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDevice ()Lcom/thermalbench/schema/DeviceDescriptorDocument;
+	public final fun getEnvironment ()Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getIterations ()Ljava/util/List;
+	public final fun getPowerSamples ()Ljava/util/List;
+	public final fun getProfile ()Lcom/thermalbench/schema/DegradationProfileDocument;
+	public final fun getResultId ()Ljava/lang/String;
+	public final fun getSchema ()Ljava/lang/String;
+	public final fun getSchemaVersion ()I
+	public final fun getSpec ()Lcom/thermalbench/schema/SpecDocument;
+	public final fun getStartedAtEpochMillis ()J
+	public final fun getTerminated ()Ljava/lang/String;
+	public final fun getThermalTimeline ()Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public final fun getToolVersion ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ResultDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ResultDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ResultDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ResultDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ResultDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/RunEnvironmentDocument {
+	public static final field Companion Lcom/thermalbench/schema/RunEnvironmentDocument$Companion;
+	public fun <init> (ZLjava/util/List;Lcom/thermalbench/schema/DeviceConditionsDocument;Lcom/thermalbench/schema/DeviceConditionsDocument;ZLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (ZLjava/util/List;Lcom/thermalbench/schema/DeviceConditionsDocument;Lcom/thermalbench/schema/DeviceConditionsDocument;ZLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public final fun component4 ()Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public final fun component5 ()Z
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Z
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (ZLjava/util/List;Lcom/thermalbench/schema/DeviceConditionsDocument;Lcom/thermalbench/schema/DeviceConditionsDocument;ZLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/RunEnvironmentDocument;ZLjava/util/List;Lcom/thermalbench/schema/DeviceConditionsDocument;Lcom/thermalbench/schema/DeviceConditionsDocument;ZLjava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendVersion ()Ljava/lang/String;
+	public final fun getComputeDevice ()Ljava/lang/String;
+	public final fun getConditionsAtEnd ()Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public final fun getConditionsAtStart ()Lcom/thermalbench/schema/DeviceConditionsDocument;
+	public final fun getExecutionPath ()Ljava/lang/String;
+	public final fun getLiveChartEnabled ()Z
+	public final fun getPreconditionsSatisfied ()Z
+	public final fun getScreenPolicy ()Ljava/lang/String;
+	public final fun getUnmetAtStart ()Ljava/util/List;
+	public final fun getWakeLockHeld ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/RunEnvironmentDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/RunEnvironmentDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/RunEnvironmentDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/RunEnvironmentDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/RunEnvironmentDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/RunProtocolDocument {
+	public static final field Companion Lcom/thermalbench/schema/RunProtocolDocument$Companion;
+	public fun <init> (IIJZJJ)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()J
+	public final fun component4 ()Z
+	public final fun component5 ()J
+	public final fun component6 ()J
+	public final fun copy (IIJZJJ)Lcom/thermalbench/schema/RunProtocolDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/RunProtocolDocument;IIJZJJILjava/lang/Object;)Lcom/thermalbench/schema/RunProtocolDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAbortOnCriticalThermal ()Z
+	public final fun getInterIterationDelayMillis ()J
+	public final fun getMaxRunDurationMillis ()J
+	public final fun getMeasuredIterations ()I
+	public final fun getTelemetryIntervalMillis ()J
+	public final fun getWarmupIterations ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/RunProtocolDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/RunProtocolDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/RunProtocolDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/RunProtocolDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/RunProtocolDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/Schema {
+	public static final field INSTANCE Lcom/thermalbench/schema/Schema;
+	public static final field MEDIA_TYPE Ljava/lang/String;
+	public static final field VERSION I
+}
+
+public final class com/thermalbench/schema/SensorTemperatureDocument {
+	public static final field Companion Lcom/thermalbench/schema/SensorTemperatureDocument$Companion;
+	public fun <init> (Ljava/lang/String;F)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()F
+	public final fun copy (Ljava/lang/String;F)Lcom/thermalbench/schema/SensorTemperatureDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/SensorTemperatureDocument;Ljava/lang/String;FILjava/lang/Object;)Lcom/thermalbench/schema/SensorTemperatureDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCelsius ()F
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/SensorTemperatureDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/SensorTemperatureDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/SensorTemperatureDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/SensorTemperatureDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/SensorTemperatureDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/SpecDocument {
+	public static final field Companion Lcom/thermalbench/schema/SpecDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/ModelRefDocument;Lcom/thermalbench/schema/BackendRefDocument;Lcom/thermalbench/schema/WorkloadDocument;Lcom/thermalbench/schema/RunProtocolDocument;Lcom/thermalbench/schema/PreconditionPolicyDocument;JLjava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/ModelRefDocument;Lcom/thermalbench/schema/BackendRefDocument;Lcom/thermalbench/schema/WorkloadDocument;Lcom/thermalbench/schema/RunProtocolDocument;Lcom/thermalbench/schema/PreconditionPolicyDocument;JLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Lcom/thermalbench/schema/ModelRefDocument;
+	public final fun component4 ()Lcom/thermalbench/schema/BackendRefDocument;
+	public final fun component5 ()Lcom/thermalbench/schema/WorkloadDocument;
+	public final fun component6 ()Lcom/thermalbench/schema/RunProtocolDocument;
+	public final fun component7 ()Lcom/thermalbench/schema/PreconditionPolicyDocument;
+	public final fun component8 ()J
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/ModelRefDocument;Lcom/thermalbench/schema/BackendRefDocument;Lcom/thermalbench/schema/WorkloadDocument;Lcom/thermalbench/schema/RunProtocolDocument;Lcom/thermalbench/schema/PreconditionPolicyDocument;JLjava/lang/String;)Lcom/thermalbench/schema/SpecDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/SpecDocument;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/schema/ModelRefDocument;Lcom/thermalbench/schema/BackendRefDocument;Lcom/thermalbench/schema/WorkloadDocument;Lcom/thermalbench/schema/RunProtocolDocument;Lcom/thermalbench/schema/PreconditionPolicyDocument;JLjava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/SpecDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackend ()Lcom/thermalbench/schema/BackendRefDocument;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getModel ()Lcom/thermalbench/schema/ModelRefDocument;
+	public final fun getPreconditions ()Lcom/thermalbench/schema/PreconditionPolicyDocument;
+	public final fun getProtocol ()Lcom/thermalbench/schema/RunProtocolDocument;
+	public final fun getSeed ()J
+	public final fun getSpecId ()Ljava/lang/String;
+	public final fun getToolVersion ()Ljava/lang/String;
+	public final fun getWorkload ()Lcom/thermalbench/schema/WorkloadDocument;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/SpecDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/SpecDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/SpecDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/SpecDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/SpecDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/StopConditionDocument {
+	public static final field Companion Lcom/thermalbench/schema/StopConditionDocument$Companion;
+	public fun <init> (Ljava/lang/String;Ljava/lang/Integer;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/Integer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/Integer;
+	public final fun copy (Ljava/lang/String;Ljava/lang/Integer;)Lcom/thermalbench/schema/StopConditionDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/StopConditionDocument;Ljava/lang/String;Ljava/lang/Integer;ILjava/lang/Object;)Lcom/thermalbench/schema/StopConditionDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTokens ()Ljava/lang/Integer;
+	public final fun getType ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/StopConditionDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/StopConditionDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/StopConditionDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/StopConditionDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/StopConditionDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalSampleDocument {
+	public static final field Companion Lcom/thermalbench/schema/ThermalSampleDocument$Companion;
+	public fun <init> (JLjava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;)V
+	public synthetic fun <init> (JLjava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Ljava/util/List;
+	public final fun copy (JLjava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;)Lcom/thermalbench/schema/ThermalSampleDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ThermalSampleDocument;JLjava/lang/String;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/schema/ThermalSampleDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getCpuFrequenciesKhz ()Ljava/util/List;
+	public final fun getElapsedNanos ()J
+	public final fun getGpuFrequencyKhz ()Ljava/lang/Long;
+	public final fun getHeadroom ()Ljava/lang/Float;
+	public final fun getSensorTemperatures ()Ljava/util/List;
+	public final fun getStatus ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ThermalSampleDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ThermalSampleDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ThermalSampleDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ThermalSampleDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalSampleDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalTimelineDocument {
+	public static final field Companion Lcom/thermalbench/schema/ThermalTimelineDocument$Companion;
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ThermalTimelineDocument;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSamples ()Ljava/util/List;
+	public final fun getTransitions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ThermalTimelineDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ThermalTimelineDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ThermalTimelineDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ThermalTimelineDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalTimelineDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalTransitionDocument {
+	public static final field Companion Lcom/thermalbench/schema/ThermalTransitionDocument$Companion;
+	public fun <init> (JLjava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (JLjava/lang/String;Ljava/lang/String;)Lcom/thermalbench/schema/ThermalTransitionDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ThermalTransitionDocument;JLjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/ThermalTransitionDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getElapsedNanos ()J
+	public final fun getFrom ()Ljava/lang/String;
+	public final fun getTo ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ThermalTransitionDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ThermalTransitionDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ThermalTransitionDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ThermalTransitionDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThermalTransitionDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThrottleEventDocument {
+	public static final field Companion Lcom/thermalbench/schema/ThrottleEventDocument$Companion;
+	public fun <init> (Ljava/lang/Integer;JLjava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (Ljava/lang/Integer;JLjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()J
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/Integer;JLjava/lang/String;Ljava/lang/String;)Lcom/thermalbench/schema/ThrottleEventDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/ThrottleEventDocument;Ljava/lang/Integer;JLjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/ThrottleEventDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getElapsedNanos ()J
+	public final fun getFrom ()Ljava/lang/String;
+	public final fun getIterationIndex ()Ljava/lang/Integer;
+	public final fun getTo ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/ThrottleEventDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/ThrottleEventDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/ThrottleEventDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/ThrottleEventDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/ThrottleEventDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/WorkloadDocument {
+	public static final field Companion Lcom/thermalbench/schema/WorkloadDocument$Companion;
+	public fun <init> (IILjava/lang/String;Lcom/thermalbench/schema/StopConditionDocument;Ljava/lang/String;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Lcom/thermalbench/schema/StopConditionDocument;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy (IILjava/lang/String;Lcom/thermalbench/schema/StopConditionDocument;Ljava/lang/String;)Lcom/thermalbench/schema/WorkloadDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/schema/WorkloadDocument;IILjava/lang/String;Lcom/thermalbench/schema/StopConditionDocument;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/schema/WorkloadDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxOutputTokens ()I
+	public final fun getPrompt ()Ljava/lang/String;
+	public final fun getPromptSha256 ()Ljava/lang/String;
+	public final fun getPromptTokens ()I
+	public final fun getStopCondition ()Lcom/thermalbench/schema/StopConditionDocument;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final synthetic class com/thermalbench/schema/WorkloadDocument$$serializer : kotlinx/serialization/internal/GeneratedSerializer {
+	public static final field INSTANCE Lcom/thermalbench/schema/WorkloadDocument$$serializer;
+	public final fun childSerializers ()[Lkotlinx/serialization/KSerializer;
+	public final fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Lcom/thermalbench/schema/WorkloadDocument;
+	public synthetic fun deserialize (Lkotlinx/serialization/encoding/Decoder;)Ljava/lang/Object;
+	public final fun getDescriptor ()Lkotlinx/serialization/descriptors/SerialDescriptor;
+	public final fun serialize (Lkotlinx/serialization/encoding/Encoder;Lcom/thermalbench/schema/WorkloadDocument;)V
+	public synthetic fun serialize (Lkotlinx/serialization/encoding/Encoder;Ljava/lang/Object;)V
+	public fun typeParametersSerializers ()[Lkotlinx/serialization/KSerializer;
+}
+
+public final class com/thermalbench/schema/WorkloadDocument$Companion {
+	public final fun serializer ()Lkotlinx/serialization/KSerializer;
+}
+

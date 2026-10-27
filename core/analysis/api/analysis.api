@@ -1,0 +1,71 @@
+public final class com/thermalbench/analysis/DefaultDegradationAnalyzer : com/thermalbench/domain/port/DegradationAnalyzer {
+	public static final field Companion Lcom/thermalbench/analysis/DefaultDegradationAnalyzer$Companion;
+	public static final field DEFAULT_PEAK_WINDOW I
+	public static final field MIN_ITERATIONS_FOR_ANALYSIS I
+	public fun <init> ()V
+	public fun <init> (Lcom/thermalbench/analysis/SteadyStateDetector;II)V
+	public synthetic fun <init> (Lcom/thermalbench/analysis/SteadyStateDetector;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun analyze (Ljava/util/List;Lcom/thermalbench/domain/model/ThermalTimeline;Lcom/thermalbench/domain/model/TerminationReason;ZI)Lcom/thermalbench/domain/model/DegradationProfile;
+}
+
+public final class com/thermalbench/analysis/DefaultDegradationAnalyzer$Companion {
+}
+
+public final class com/thermalbench/analysis/ExponentialDecayFitter {
+	public static final field INSTANCE Lcom/thermalbench/analysis/ExponentialDecayFitter;
+	public final fun fit ([D[D)Lcom/thermalbench/domain/model/DecayFit;
+}
+
+public final class com/thermalbench/analysis/Statistics {
+	public static final field INSTANCE Lcom/thermalbench/analysis/Statistics;
+	public final fun coefficientOfVariation ([D)D
+	public final fun linearRegression ([D[D)Lcom/thermalbench/analysis/Statistics$Regression;
+	public final fun mean ([D)D
+	public final fun median ([D)D
+	public final fun percentile ([DD)D
+	public final fun rollingMedian ([DI)[D
+	public final fun standardDeviation ([D)D
+}
+
+public final class com/thermalbench/analysis/Statistics$Regression {
+	public fun <init> (DDD)V
+	public final fun component1 ()D
+	public final fun component2 ()D
+	public final fun component3 ()D
+	public final fun copy (DDD)Lcom/thermalbench/analysis/Statistics$Regression;
+	public static synthetic fun copy$default (Lcom/thermalbench/analysis/Statistics$Regression;DDDILjava/lang/Object;)Lcom/thermalbench/analysis/Statistics$Regression;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIntercept ()D
+	public final fun getRSquared ()D
+	public final fun getSlope ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/analysis/SteadyStateDetector {
+	public static final field Companion Lcom/thermalbench/analysis/SteadyStateDetector$Companion;
+	public static final field DEFAULT_MAX_CV D
+	public static final field DEFAULT_MAX_SLOPE D
+	public static final field DEFAULT_WINDOW I
+	public fun <init> ()V
+	public fun <init> (IDD)V
+	public synthetic fun <init> (IDDILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun detect ([D)Lcom/thermalbench/analysis/SteadyStateDetector$SteadyState;
+}
+
+public final class com/thermalbench/analysis/SteadyStateDetector$Companion {
+}
+
+public final class com/thermalbench/analysis/SteadyStateDetector$SteadyState {
+	public fun <init> (ID)V
+	public final fun component1 ()I
+	public final fun component2 ()D
+	public final fun copy (ID)Lcom/thermalbench/analysis/SteadyStateDetector$SteadyState;
+	public static synthetic fun copy$default (Lcom/thermalbench/analysis/SteadyStateDetector$SteadyState;IDILjava/lang/Object;)Lcom/thermalbench/analysis/SteadyStateDetector$SteadyState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getStartIndex ()I
+	public final fun getValue ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+

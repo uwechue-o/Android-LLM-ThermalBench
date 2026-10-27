@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- No storage permissions, deliberately. Specs, models and results live in
+         this package's own external files directory, which needs none and which
+         adb can still write to.
+
+         Asking for legacy external storage here was a bug: it put the process
+         into legacy mode, where external access requires READ_EXTERNAL_STORAGE,
+         a permission that is not granted on a modern device. The result was a
+         harness that could not read its own directory. -->
+
+    <!-- The harness never uploads anything; the leaderboard lives in the app. -->
+
+    <!-- For RunForegroundService: without it, vendor freezers suspend the
+         harness mid-run. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!-- am instrument does not keep the CPU awake; HeadlessRunner holds a
+         partial wake lock through the gate wait and the run. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:name=".HarnessApplication"
+        android:allowBackup="false"
+        android:hasFragileUserData="false"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:label="@string/harness_name">
+
+        <!-- No launcher activity: this APK exists to be driven by am instrument. -->
+
+        <uses-library
+            android:name="android.test.runner"
+            android:required="false" />
+
+        <service
+            android:name=".RunForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Keeps a headless hardware benchmark from being frozen mid-run." />
+        </service>
+    </application>
+
+    <!-- Self-instrumenting: one APK, no separate test process to perturb the
+         measurement. targetPackage is this package. -->
+    <instrumentation
+        android:name="androidx.test.runner.AndroidJUnitRunner"
+        android:label="ThermalBench headless harness"
+        android:targetPackage="com.thermalbench.harness" />
+
+</manifest>

@@ -1,0 +1,25 @@
+# ThermalBench detekt overrides. Everything not listed falls back to detekt defaults.
+build:
+  maxIssues: 0
+
+style:
+  MagicNumber:
+    active: false
+  MaxLineLength:
+    maxLineLength: 130
+  ReturnCount:
+    active: false
+
+complexity:
+  LongParameterList:
+    # Domain value objects (BenchmarkSpec, IterationSample) are wide by design.
+    active: false
+  TooManyFunctions:
+    active: false
+  LongMethod:
+    threshold: 120
+
+naming:
+  FunctionNaming:
+    # Composable functions are PascalCase.
+    ignoreAnnotated: ["Composable"]

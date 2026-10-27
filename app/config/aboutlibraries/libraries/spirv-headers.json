@@ -1,0 +1,15 @@
+{
+  "uniqueId": "KhronosGroup:SPIRV-Headers",
+  "artifactVersion": "vulkan-sdk-1.4.363.0",
+  "name": "SPIRV-Headers",
+  "description": "SPIR-V headers, used to build ggml's Vulkan shaders.",
+  "website": "https://github.com/KhronosGroup/SPIRV-Headers",
+  "developers": [
+    {
+      "name": "The Khronos Group Inc."
+    }
+  ],
+  "licenses": [
+    "spirv-headers"
+  ]
+}

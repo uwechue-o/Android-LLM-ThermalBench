@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- Qualcomm's NPU runtime talks to the Hexagon DSP through the vendor's
+             FastRPC library. Since Android 12 an app may load a vendor library
+             only if it declares it. Not required: without it the NPU path is
+             simply unavailable, and CPU and GPU are unaffected. -->
+        <uses-native-library
+            android:name="libcdsprpc.so"
+            android:required="false" />
+    </application>
+</manifest>

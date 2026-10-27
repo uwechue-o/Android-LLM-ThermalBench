@@ -1,0 +1,15 @@
+{
+  "uniqueId": "KhronosGroup:OpenCL-Headers",
+  "artifactVersion": "v2026.05.29",
+  "name": "OpenCL-Headers",
+  "description": "OpenCL C headers, used to build ggml's OpenCL backend.",
+  "website": "https://github.com/KhronosGroup/OpenCL-Headers",
+  "developers": [
+    {
+      "name": "The Khronos Group Inc."
+    }
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ]
+}

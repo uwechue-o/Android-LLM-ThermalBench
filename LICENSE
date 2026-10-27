@@ -1,0 +1,14 @@
+Copyright (c) 2026 uwechue-o. All rights reserved.
+
+This software and its source code are proprietary. No licence is granted to
+copy, modify, merge, publish, distribute, sublicense or sell any part of it,
+or to use it in other software, without the prior written permission of the
+copyright holder.
+
+Viewing this repository, and forking it on GitHub as GitHub's Terms of
+Service allow, grants no further rights.
+
+Third-party components included in or used by this software (among them
+llama.cpp, MediaPipe, LiteRT, ExecuTorch and the libraries listed on the
+app's licences screen) remain under their own licences, and nothing here
+changes their terms.

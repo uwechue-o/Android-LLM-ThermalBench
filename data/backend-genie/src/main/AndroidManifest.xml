@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- The QNN runtime reaches the Hexagon NPU through the vendor's FastRPC
+             library, which an app may load only if it declares it. Not
+             required: without it Genie's NPU path is unavailable. -->
+        <uses-native-library
+            android:name="libcdsprpc.so"
+            android:required="false" />
+    </application>
+</manifest>

@@ -1,0 +1,15 @@
+{
+  "uniqueId": "KhronosGroup:Vulkan-Headers",
+  "artifactVersion": "vulkan-sdk-1.4.363.0",
+  "name": "Vulkan-Headers",
+  "description": "Vulkan C and C++ headers, used to build ggml's Vulkan backend.",
+  "website": "https://github.com/KhronosGroup/Vulkan-Headers",
+  "developers": [
+    {
+      "name": "The Khronos Group Inc."
+    }
+  ],
+  "licenses": [
+    "Apache-2.0"
+  ]
+}

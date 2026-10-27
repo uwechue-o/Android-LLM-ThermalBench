@@ -1,0 +1,2 @@
+# PDFs are binary even when they contain no NUL byte; never convert their line endings.
+*.pdf binary

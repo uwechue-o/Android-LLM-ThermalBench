@@ -1,0 +1,1431 @@
+public final class com/thermalbench/domain/model/BackendCapabilities {
+	public synthetic fun <init> (Ljava/lang/String;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;ZZLjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;ZZLjava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-XTnkX30 ()Ljava/lang/String;
+	public final fun component2 ()Z
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/util/Set;
+	public final fun component5 ()Ljava/util/Set;
+	public final fun component6 ()Z
+	public final fun component7 ()Z
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()Ljava/util/List;
+	public final fun copy-noMcCKw (Ljava/lang/String;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;ZZLjava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/BackendCapabilities;
+	public static synthetic fun copy-noMcCKw$default (Lcom/thermalbench/domain/model/BackendCapabilities;Ljava/lang/String;ZLjava/lang/String;Ljava/util/Set;Ljava/util/Set;ZZLjava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/BackendCapabilities;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAvailable ()Z
+	public final fun getDelegates ()Ljava/util/Set;
+	public final fun getFormats ()Ljava/util/Set;
+	public final fun getGpuApis ()Ljava/util/List;
+	public final fun getId-XTnkX30 ()Ljava/lang/String;
+	public final fun getRuntimeVersion ()Ljava/lang/String;
+	public final fun getSupportsStreaming ()Z
+	public final fun getSupportsTokenCountStop ()Z
+	public final fun getUnavailableReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BackendComparison {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-j42B-dU ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/util/List;
+	public final fun copy-RS_6iGg (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/BackendComparison;
+	public static synthetic fun copy-RS_6iGg$default (Lcom/thermalbench/domain/model/BackendComparison;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/BackendComparison;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDeviceModel ()Ljava/lang/String;
+	public final fun getRows ()Ljava/util/List;
+	public final fun getSpecId-j42B-dU ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BackendId {
+	public static final field Companion Lcom/thermalbench/domain/model/BackendId$Companion;
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/thermalbench/domain/model/BackendId;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BackendId$Companion {
+	public final fun getEXECUTORCH-XTnkX30 ()Ljava/lang/String;
+	public final fun getLITERT_LM-XTnkX30 ()Ljava/lang/String;
+	public final fun getLLAMA_CPP-XTnkX30 ()Ljava/lang/String;
+	public final fun getMEDIAPIPE-XTnkX30 ()Ljava/lang/String;
+	public final fun getQUALCOMM_GENIE-XTnkX30 ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BackendRef {
+	public static final field Companion Lcom/thermalbench/domain/model/BackendRef$Companion;
+	public static final field OPTION_GPU_API Ljava/lang/String;
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-XTnkX30 ()Ljava/lang/String;
+	public final fun component2 ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun component3 ()Ljava/util/Map;
+	public final fun copy-Lm6xDi4 (Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;)Lcom/thermalbench/domain/model/BackendRef;
+	public static synthetic fun copy-Lm6xDi4$default (Lcom/thermalbench/domain/model/BackendRef;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;ILjava/lang/Object;)Lcom/thermalbench/domain/model/BackendRef;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getId-XTnkX30 ()Ljava/lang/String;
+	public final fun getOptions ()Ljava/util/Map;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BackendRef$Companion {
+}
+
+public final class com/thermalbench/domain/model/BenchmarkResult {
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/BenchmarkSpec;Lcom/thermalbench/domain/model/DeviceDescriptor;Lcom/thermalbench/domain/model/RunEnvironment;JLjava/util/List;Lcom/thermalbench/domain/model/ThermalTimeline;Ljava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Ljava/lang/String;Lcom/thermalbench/domain/model/DegradationProfile;Lcom/thermalbench/domain/model/SemVer;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-9MuE3o0 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Lcom/thermalbench/domain/model/DegradationProfile;
+	public final fun component12 ()Lcom/thermalbench/domain/model/SemVer;
+	public final fun component13 ()I
+	public final fun component2 ()Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public final fun component3 ()Lcom/thermalbench/domain/model/DeviceDescriptor;
+	public final fun component4 ()Lcom/thermalbench/domain/model/RunEnvironment;
+	public final fun component5 ()J
+	public final fun component6 ()Ljava/util/List;
+	public final fun component7 ()Lcom/thermalbench/domain/model/ThermalTimeline;
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun copy-342bv54 (Ljava/lang/String;Lcom/thermalbench/domain/model/BenchmarkSpec;Lcom/thermalbench/domain/model/DeviceDescriptor;Lcom/thermalbench/domain/model/RunEnvironment;JLjava/util/List;Lcom/thermalbench/domain/model/ThermalTimeline;Ljava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Ljava/lang/String;Lcom/thermalbench/domain/model/DegradationProfile;Lcom/thermalbench/domain/model/SemVer;I)Lcom/thermalbench/domain/model/BenchmarkResult;
+	public static synthetic fun copy-342bv54$default (Lcom/thermalbench/domain/model/BenchmarkResult;Ljava/lang/String;Lcom/thermalbench/domain/model/BenchmarkSpec;Lcom/thermalbench/domain/model/DeviceDescriptor;Lcom/thermalbench/domain/model/RunEnvironment;JLjava/util/List;Lcom/thermalbench/domain/model/ThermalTimeline;Ljava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Ljava/lang/String;Lcom/thermalbench/domain/model/DegradationProfile;Lcom/thermalbench/domain/model/SemVer;IILjava/lang/Object;)Lcom/thermalbench/domain/model/BenchmarkResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDevice ()Lcom/thermalbench/domain/model/DeviceDescriptor;
+	public final fun getEnvironment ()Lcom/thermalbench/domain/model/RunEnvironment;
+	public final fun getErrorMessage ()Ljava/lang/String;
+	public final fun getIterations ()Ljava/util/List;
+	public final fun getMeasuredIterations ()Ljava/util/List;
+	public final fun getPowerSamples ()Ljava/util/List;
+	public final fun getProfile ()Lcom/thermalbench/domain/model/DegradationProfile;
+	public final fun getResultId-9MuE3o0 ()Ljava/lang/String;
+	public final fun getSchemaVersion ()I
+	public final fun getSpec ()Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public final fun getStartedAtEpochMillis ()J
+	public final fun getTerminated ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun getThermalTimeline ()Lcom/thermalbench/domain/model/ThermalTimeline;
+	public final fun getToolVersion ()Lcom/thermalbench/domain/model/SemVer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/BenchmarkSpec {
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/BackendRef;Lcom/thermalbench/domain/model/Workload;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;JLcom/thermalbench/domain/model/SemVer;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/BackendRef;Lcom/thermalbench/domain/model/Workload;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;JLcom/thermalbench/domain/model/SemVer;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-j42B-dU ()Ljava/lang/String;
+	public final fun component2 ()Lcom/thermalbench/domain/model/ModelRef;
+	public final fun component3 ()Lcom/thermalbench/domain/model/BackendRef;
+	public final fun component4 ()Lcom/thermalbench/domain/model/Workload;
+	public final fun component5 ()Lcom/thermalbench/domain/model/RunProtocol;
+	public final fun component6 ()Lcom/thermalbench/domain/model/PreconditionPolicy;
+	public final fun component7 ()J
+	public final fun component8 ()Lcom/thermalbench/domain/model/SemVer;
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy-byiHTPw (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/BackendRef;Lcom/thermalbench/domain/model/Workload;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;JLcom/thermalbench/domain/model/SemVer;Ljava/lang/String;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public static synthetic fun copy-byiHTPw$default (Lcom/thermalbench/domain/model/BenchmarkSpec;Ljava/lang/String;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/BackendRef;Lcom/thermalbench/domain/model/Workload;Lcom/thermalbench/domain/model/RunProtocol;Lcom/thermalbench/domain/model/PreconditionPolicy;JLcom/thermalbench/domain/model/SemVer;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackend ()Lcom/thermalbench/domain/model/BackendRef;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getModel ()Lcom/thermalbench/domain/model/ModelRef;
+	public final fun getPreconditions ()Lcom/thermalbench/domain/model/PreconditionPolicy;
+	public final fun getProtocol ()Lcom/thermalbench/domain/model/RunProtocol;
+	public final fun getSeed ()J
+	public final fun getSpecId-j42B-dU ()Ljava/lang/String;
+	public final fun getToolVersion ()Lcom/thermalbench/domain/model/SemVer;
+	public final fun getWorkload ()Lcom/thermalbench/domain/model/Workload;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ComparisonRow {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;DLcom/thermalbench/domain/model/ValidityVerdict;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-9MuE3o0 ()Ljava/lang/String;
+	public final fun component10 ()D
+	public final fun component11 ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4-XTnkX30 ()Ljava/lang/String;
+	public final fun component5 ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun component6 ()D
+	public final fun component7 ()Ljava/lang/Double;
+	public final fun component8 ()Ljava/lang/Double;
+	public final fun component9 ()Ljava/lang/Integer;
+	public final fun copy-isFiTCg (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;DLcom/thermalbench/domain/model/ValidityVerdict;)Lcom/thermalbench/domain/model/ComparisonRow;
+	public static synthetic fun copy-isFiTCg$default (Lcom/thermalbench/domain/model/ComparisonRow;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;DLcom/thermalbench/domain/model/ValidityVerdict;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ComparisonRow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendId-XTnkX30 ()Ljava/lang/String;
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getDeviceModel ()Ljava/lang/String;
+	public final fun getIterationsToFirstThrottle ()Ljava/lang/Integer;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getPeakDecodeTokensPerSecond ()D
+	public final fun getResultId-9MuE3o0 ()Ljava/lang/String;
+	public final fun getRetentionRatio ()Ljava/lang/Double;
+	public final fun getSteadyStateTokensPerSecond ()Ljava/lang/Double;
+	public final fun getTtftDriftMicrosPerIteration ()D
+	public final fun getValidity ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/DecayFit {
+	public fun <init> (DDDD)V
+	public final fun component1 ()D
+	public final fun component2 ()D
+	public final fun component3 ()D
+	public final fun component4 ()D
+	public final fun copy (DDDD)Lcom/thermalbench/domain/model/DecayFit;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/DecayFit;DDDDILjava/lang/Object;)Lcom/thermalbench/domain/model/DecayFit;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAmplitude ()D
+	public final fun getAsymptote ()D
+	public final fun getRSquared ()D
+	public final fun getTimeConstantSeconds ()D
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/DegradationProfile {
+	public synthetic fun <init> (DLjava/lang/Double;Ljava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Lcom/thermalbench/domain/model/DecayFit;DLjava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Lcom/thermalbench/domain/model/ValidityVerdict;IDDLjava/lang/Integer;Ljava/lang/Integer;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()D
+	public final fun component10 ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public final fun component11 ()I
+	public final fun component12 ()D
+	public final fun component13 ()D
+	public final fun component14 ()Ljava/lang/Integer;
+	public final fun component15 ()Ljava/lang/Integer;
+	public final fun component2 ()Ljava/lang/Double;
+	public final fun component3 ()Ljava/lang/Double;
+	public final fun component4-FghU774 ()Lkotlin/time/Duration;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Lcom/thermalbench/domain/model/DecayFit;
+	public final fun component7 ()D
+	public final fun component8 ()Ljava/util/List;
+	public final fun component9 ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun copy-14LgPcA (DLjava/lang/Double;Ljava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Lcom/thermalbench/domain/model/DecayFit;DLjava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Lcom/thermalbench/domain/model/ValidityVerdict;IDDLjava/lang/Integer;Ljava/lang/Integer;)Lcom/thermalbench/domain/model/DegradationProfile;
+	public static synthetic fun copy-14LgPcA$default (Lcom/thermalbench/domain/model/DegradationProfile;DLjava/lang/Double;Ljava/lang/Double;Lkotlin/time/Duration;Ljava/lang/Integer;Lcom/thermalbench/domain/model/DecayFit;DLjava/util/List;Lcom/thermalbench/domain/model/TerminationReason;Lcom/thermalbench/domain/model/ValidityVerdict;IDDLjava/lang/Integer;Ljava/lang/Integer;ILjava/lang/Object;)Lcom/thermalbench/domain/model/DegradationProfile;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryDrainPercent ()Ljava/lang/Integer;
+	public final fun getBatteryTemperatureRiseDeciC ()Ljava/lang/Integer;
+	public final fun getDecayModel ()Lcom/thermalbench/domain/model/DecayFit;
+	public final fun getIterationsToFirstThrottle ()Ljava/lang/Integer;
+	public final fun getMeanDecodeTokensPerSecond ()D
+	public final fun getMeasuredIterationCount ()I
+	public final fun getMinDecodeTokensPerSecond ()D
+	public final fun getPeakDecodeTokensPerSecond ()D
+	public final fun getRetentionRatio ()Ljava/lang/Double;
+	public final fun getSteadyStateTokensPerSecond ()Ljava/lang/Double;
+	public final fun getTerminated ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun getThrottleEvents ()Ljava/util/List;
+	public final fun getTimeToFirstThrottle-FghU774 ()Lkotlin/time/Duration;
+	public final fun getTtftDriftMicrosPerIteration ()D
+	public final fun getValidity ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/Delegate : java/lang/Enum {
+	public static final field CPU Lcom/thermalbench/domain/model/Delegate;
+	public static final field GPU Lcom/thermalbench/domain/model/Delegate;
+	public static final field NPU Lcom/thermalbench/domain/model/Delegate;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/Delegate;
+	public static fun values ()[Lcom/thermalbench/domain/model/Delegate;
+}
+
+public final class com/thermalbench/domain/model/DeviceComparison {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/util/List;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-j42B-dU ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy-LA26kvk (Ljava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/DeviceComparison;
+	public static synthetic fun copy-LA26kvk$default (Lcom/thermalbench/domain/model/DeviceComparison;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/DeviceComparison;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getRows ()Ljava/util/List;
+	public final fun getSpecId-j42B-dU ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/DeviceConditions {
+	public fun <init> (JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;IZZLjava/lang/Integer;)V
+	public final fun component1 ()J
+	public final fun component2 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()I
+	public final fun component5 ()Z
+	public final fun component6 ()Z
+	public final fun component7 ()Ljava/lang/Integer;
+	public final fun copy (JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;IZZLjava/lang/Integer;)Lcom/thermalbench/domain/model/DeviceConditions;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/DeviceConditions;JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;IZZLjava/lang/Integer;ILjava/lang/Object;)Lcom/thermalbench/domain/model/DeviceConditions;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getElapsedNanos ()J
+	public final fun getPlugged ()Z
+	public final fun getScreenOn ()Z
+	public final fun getThermalHeadroom ()Ljava/lang/Float;
+	public final fun getThermalStatus ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/DeviceDescriptor {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component11 ()Ljava/util/List;
+	public final fun component12 ()I
+	public final fun component13 ()J
+	public final fun component14 ()Ljava/util/List;
+	public final fun component15 ()Z
+	public final fun component16 ()Z
+	public final fun component17 ()Ljava/lang/String;
+	public final fun component18 ()Z
+	public final fun component19 ()Ljava/util/List;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Ljava/lang/String;
+	public final fun component9 ()I
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;)Lcom/thermalbench/domain/model/DeviceDescriptor;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/DeviceDescriptor;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/List;IJLjava/util/List;ZZLjava/lang/String;ZLjava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/DeviceDescriptor;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAbis ()Ljava/util/List;
+	public final fun getAndroidRelease ()Ljava/lang/String;
+	public final fun getAnonymousDeviceId ()Ljava/lang/String;
+	public final fun getBoard ()Ljava/lang/String;
+	public final fun getCpuCoreCount ()I
+	public final fun getCpuFrequencyReadable ()Z
+	public final fun getCpuMaxFrequenciesKhz ()Ljava/util/List;
+	public final fun getDevice ()Ljava/lang/String;
+	public final fun getGpuFrequencyReadable ()Z
+	public final fun getHardware ()Ljava/lang/String;
+	public final fun getManufacturer ()Ljava/lang/String;
+	public final fun getModel ()Ljava/lang/String;
+	public final fun getSdkInt ()I
+	public final fun getSecurityPatch ()Ljava/lang/String;
+	public final fun getSocManufacturer ()Ljava/lang/String;
+	public final fun getSocModel ()Ljava/lang/String;
+	public final fun getThermalHeadroomSupported ()Z
+	public final fun getThermalSensorNames ()Ljava/util/List;
+	public final fun getTotalRamBytes ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/GenerationResult {
+	public fun <init> (JLjava/lang/Long;JIILjava/lang/String;Ljava/util/List;)V
+	public synthetic fun <init> (JLjava/lang/Long;JIILjava/lang/String;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()Ljava/lang/Long;
+	public final fun component3 ()J
+	public final fun component4 ()I
+	public final fun component5 ()I
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/util/List;
+	public final fun copy (JLjava/lang/Long;JIILjava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/GenerationResult;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/GenerationResult;JLjava/lang/Long;JIILjava/lang/String;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/GenerationResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDecodeTokensPerSecond ()D
+	public final fun getEndElapsedNanos ()J
+	public final fun getFirstTokenElapsedNanos ()Ljava/lang/Long;
+	public final fun getOutputTokenCount ()I
+	public final fun getPrefillTokensPerSecond ()D
+	public final fun getPromptTokenCount ()I
+	public final fun getStartElapsedNanos ()J
+	public final fun getText ()Ljava/lang/String;
+	public final fun getTimeToFirstTokenMicros ()J
+	public final fun getTokenElapsedNanos ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/IterationSample {
+	public fun <init> (ILcom/thermalbench/domain/model/Phase;JJJDDIILcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;)V
+	public synthetic fun <init> (ILcom/thermalbench/domain/model/Phase;JJJDDIILcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component10 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component11 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component12 ()Ljava/lang/Float;
+	public final fun component13 ()Ljava/lang/Integer;
+	public final fun component14 ()I
+	public final fun component15 ()Ljava/util/List;
+	public final fun component16 ()J
+	public final fun component17 ()Z
+	public final fun component18 ()Ljava/lang/Long;
+	public final fun component19 ()Ljava/util/List;
+	public final fun component2 ()Lcom/thermalbench/domain/model/Phase;
+	public final fun component3 ()J
+	public final fun component4 ()J
+	public final fun component5 ()J
+	public final fun component6 ()D
+	public final fun component7 ()D
+	public final fun component8 ()I
+	public final fun component9 ()I
+	public final fun copy (ILcom/thermalbench/domain/model/Phase;JJJDDIILcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;)Lcom/thermalbench/domain/model/IterationSample;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/IterationSample;ILcom/thermalbench/domain/model/Phase;JJJDDIILcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;ILjava/util/List;JZLjava/lang/Long;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/IterationSample;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getCpuFrequenciesKhz ()Ljava/util/List;
+	public final fun getDecodeTokensPerSecond ()D
+	public final fun getDurationNanos ()J
+	public final fun getEndElapsedNanos ()J
+	public final fun getGpuFrequencyKhz ()Ljava/lang/Long;
+	public final fun getIndex ()I
+	public final fun getOutputTokenCount ()I
+	public final fun getPeakRssBytes ()J
+	public final fun getPhase ()Lcom/thermalbench/domain/model/Phase;
+	public final fun getPrefillTokensPerSecond ()D
+	public final fun getPromptTokenCount ()I
+	public final fun getSensorTemperatures ()Ljava/util/List;
+	public final fun getStartElapsedNanos ()J
+	public final fun getThermalHeadroomAtStart ()Ljava/lang/Float;
+	public final fun getThermalStatusAtEnd ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun getThermalStatusAtStart ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun getThrottleObserved ()Z
+	public final fun getTimeToFirstTokenMicros ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/LeaderboardEntry {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;IJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Integer;
+	public final fun component11 ()I
+	public final fun component12 ()J
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5-XTnkX30 ()Ljava/lang/String;
+	public final fun component6 ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun component7 ()D
+	public final fun component8 ()Ljava/lang/Double;
+	public final fun component9 ()Ljava/lang/Double;
+	public final fun copy-2t-zz94 (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;IJ)Lcom/thermalbench/domain/model/LeaderboardEntry;
+	public static synthetic fun copy-2t-zz94$default (Lcom/thermalbench/domain/model/LeaderboardEntry;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;DLjava/lang/Double;Ljava/lang/Double;Ljava/lang/Integer;IJILjava/lang/Object;)Lcom/thermalbench/domain/model/LeaderboardEntry;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendId-XTnkX30 ()Ljava/lang/String;
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getDeviceModel ()Ljava/lang/String;
+	public final fun getIterationsToFirstThrottle ()Ljava/lang/Integer;
+	public final fun getMeasuredIterations ()I
+	public final fun getModelName ()Ljava/lang/String;
+	public final fun getPeakDecodeTokensPerSecond ()D
+	public final fun getRetentionRatio ()Ljava/lang/Double;
+	public final fun getSocModel ()Ljava/lang/String;
+	public final fun getSteadyStateTokensPerSecond ()Ljava/lang/Double;
+	public final fun getSubmissionId ()Ljava/lang/String;
+	public final fun getSubmittedEpochMillis ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/LeaderboardFilter {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;IIILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2-0lLDsOs ()Ljava/lang/String;
+	public final fun component3 ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5 ()I
+	public final fun component6 ()I
+	public final fun copy-aweJIjw (Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;II)Lcom/thermalbench/domain/model/LeaderboardFilter;
+	public static synthetic fun copy-aweJIjw$default (Lcom/thermalbench/domain/model/LeaderboardFilter;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;IIILjava/lang/Object;)Lcom/thermalbench/domain/model/LeaderboardFilter;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendId-0lLDsOs ()Ljava/lang/String;
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getDeviceModel ()Ljava/lang/String;
+	public final fun getLimit ()I
+	public final fun getMinMeasuredIterations ()I
+	public final fun getModelName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract class com/thermalbench/domain/model/LoadedModel {
+	public fun <init> (Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;JLjava/lang/String;)V
+	public synthetic fun <init> (Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;JLjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun getComputeDevice ()Ljava/lang/String;
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getLoadNanos ()J
+	public final fun getRef ()Lcom/thermalbench/domain/model/ModelRef;
+}
+
+public final class com/thermalbench/domain/model/MemorySample {
+	public fun <init> (JJJZ)V
+	public final fun component1 ()J
+	public final fun component2 ()J
+	public final fun component3 ()J
+	public final fun component4 ()Z
+	public final fun copy (JJJZ)Lcom/thermalbench/domain/model/MemorySample;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/MemorySample;JJJZILjava/lang/Object;)Lcom/thermalbench/domain/model/MemorySample;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAvailableSystemBytes ()J
+	public final fun getElapsedNanos ()J
+	public final fun getLowMemory ()Z
+	public final fun getRssBytes ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ModelFormat : java/lang/Enum {
+	public static final field EXECUTORCH_PTE Lcom/thermalbench/domain/model/ModelFormat;
+	public static final field GENIE_BUNDLE Lcom/thermalbench/domain/model/ModelFormat;
+	public static final field GGUF Lcom/thermalbench/domain/model/ModelFormat;
+	public static final field LITERT_LM Lcom/thermalbench/domain/model/ModelFormat;
+	public static final field MEDIAPIPE_TASK Lcom/thermalbench/domain/model/ModelFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/ModelFormat;
+	public static fun values ()[Lcom/thermalbench/domain/model/ModelFormat;
+}
+
+public final class com/thermalbench/domain/model/ModelRef {
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelFormat;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelFormat;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Lcom/thermalbench/domain/model/ModelFormat;
+	public final fun component3-4oGdsSs ()Ljava/lang/String;
+	public final fun component4 ()J
+	public final fun component5 ()Ljava/lang/String;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Ljava/lang/Long;
+	public final fun copy-pzC6Q1w (Ljava/lang/String;Lcom/thermalbench/domain/model/ModelFormat;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;)Lcom/thermalbench/domain/model/ModelRef;
+	public static synthetic fun copy-pzC6Q1w$default (Lcom/thermalbench/domain/model/ModelRef;Ljava/lang/String;Lcom/thermalbench/domain/model/ModelFormat;Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/Long;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ModelRef;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFormat ()Lcom/thermalbench/domain/model/ModelFormat;
+	public final fun getName ()Ljava/lang/String;
+	public final fun getParameterCount ()Ljava/lang/Long;
+	public final fun getPath ()Ljava/lang/String;
+	public final fun getQuantization ()Ljava/lang/String;
+	public final fun getSha256-4oGdsSs ()Ljava/lang/String;
+	public final fun getSizeBytes ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/Phase : java/lang/Enum {
+	public static final field MEASURED Lcom/thermalbench/domain/model/Phase;
+	public static final field WARMUP Lcom/thermalbench/domain/model/Phase;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/Phase;
+	public static fun values ()[Lcom/thermalbench/domain/model/Phase;
+}
+
+public final class com/thermalbench/domain/model/PowerSample {
+	public fun <init> (JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;Z)V
+	public final fun component1 ()J
+	public final fun component2 ()I
+	public final fun component3 ()Ljava/lang/Long;
+	public final fun component4 ()Ljava/lang/Long;
+	public final fun component5 ()Ljava/lang/Integer;
+	public final fun component6 ()Z
+	public final fun copy (JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;Z)Lcom/thermalbench/domain/model/PowerSample;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/PowerSample;JILjava/lang/Long;Ljava/lang/Long;Ljava/lang/Integer;ZILjava/lang/Object;)Lcom/thermalbench/domain/model/PowerSample;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryPercent ()I
+	public final fun getChargeCounterMicroAh ()Ljava/lang/Long;
+	public final fun getCurrentNowMicroAmps ()Ljava/lang/Long;
+	public final fun getElapsedNanos ()J
+	public final fun getPlugged ()Z
+	public final fun getVoltageMillivolts ()Ljava/lang/Integer;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/PreconditionPolicy {
+	public static final field Companion Lcom/thermalbench/domain/model/PreconditionPolicy$Companion;
+	public synthetic fun <init> (Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;ZILcom/thermalbench/domain/model/ScreenPolicy;JJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component2 ()Ljava/lang/Float;
+	public final fun component3 ()Z
+	public final fun component4 ()I
+	public final fun component5 ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun component6-UwyO8pc ()J
+	public final fun component7-UwyO8pc ()J
+	public final fun copy-zxTFDJ0 (Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;ZILcom/thermalbench/domain/model/ScreenPolicy;JJ)Lcom/thermalbench/domain/model/PreconditionPolicy;
+	public static synthetic fun copy-zxTFDJ0$default (Lcom/thermalbench/domain/model/PreconditionPolicy;Lcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;ZILcom/thermalbench/domain/model/ScreenPolicy;JJILjava/lang/Object;)Lcom/thermalbench/domain/model/PreconditionPolicy;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxWaitForPreconditions-UwyO8pc ()J
+	public final fun getMinBatteryPercent ()I
+	public final fun getMinThermalHeadroom ()Ljava/lang/Float;
+	public final fun getRequireUnplugged ()Z
+	public final fun getRequiredThermalStatus ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun getScreenPolicy ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun getStabilizationWindow-UwyO8pc ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/PreconditionPolicy$Companion {
+	public final fun getDEFAULT ()Lcom/thermalbench/domain/model/PreconditionPolicy;
+}
+
+public abstract interface class com/thermalbench/domain/model/PreconditionState {
+}
+
+public final class com/thermalbench/domain/model/PreconditionState$Satisfied : com/thermalbench/domain/model/PreconditionState {
+	public fun <init> (Lcom/thermalbench/domain/model/DeviceConditions;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun copy (Lcom/thermalbench/domain/model/DeviceConditions;)Lcom/thermalbench/domain/model/PreconditionState$Satisfied;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/PreconditionState$Satisfied;Lcom/thermalbench/domain/model/DeviceConditions;ILjava/lang/Object;)Lcom/thermalbench/domain/model/PreconditionState$Satisfied;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAt ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/PreconditionState$TimedOut : com/thermalbench/domain/model/PreconditionState {
+	public fun <init> (Ljava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun copy (Ljava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;)Lcom/thermalbench/domain/model/PreconditionState$TimedOut;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/PreconditionState$TimedOut;Ljava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;ILjava/lang/Object;)Lcom/thermalbench/domain/model/PreconditionState$TimedOut;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLatest ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun getUnmet ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/PreconditionState$Waiting : com/thermalbench/domain/model/PreconditionState {
+	public synthetic fun <init> (Ljava/util/List;JLkotlin/time/Duration;Lcom/thermalbench/domain/model/DeviceConditions;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2-UwyO8pc ()J
+	public final fun component3-FghU774 ()Lkotlin/time/Duration;
+	public final fun component4 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun copy-UREId80 (Ljava/util/List;JLkotlin/time/Duration;Lcom/thermalbench/domain/model/DeviceConditions;)Lcom/thermalbench/domain/model/PreconditionState$Waiting;
+	public static synthetic fun copy-UREId80$default (Lcom/thermalbench/domain/model/PreconditionState$Waiting;Ljava/util/List;JLkotlin/time/Duration;Lcom/thermalbench/domain/model/DeviceConditions;ILjava/lang/Object;)Lcom/thermalbench/domain/model/PreconditionState$Waiting;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getElapsedInWindow-UwyO8pc ()J
+	public final fun getEstimatedReady-FghU774 ()Lkotlin/time/Duration;
+	public final fun getLatest ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun getUnmet ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/PreconditionsKt {
+	public static final fun evaluate (Lcom/thermalbench/domain/model/PreconditionPolicy;Lcom/thermalbench/domain/model/DeviceConditions;)Ljava/util/List;
+	public static final fun formatThermalMargin (F)Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ResultId {
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/thermalbench/domain/model/ResultId;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ResultSummary {
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;JILjava/lang/Double;Lcom/thermalbench/domain/model/ValidityVerdict;Lcom/thermalbench/domain/model/TerminationReason;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-9MuE3o0 ()Ljava/lang/String;
+	public final fun component10 ()Ljava/lang/Double;
+	public final fun component11 ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public final fun component12 ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun component2-j42B-dU ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun component4 ()Ljava/lang/String;
+	public final fun component5-XTnkX30 ()Ljava/lang/String;
+	public final fun component6 ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()J
+	public final fun component9 ()I
+	public final fun copy-nQyRXzY (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;JILjava/lang/Double;Lcom/thermalbench/domain/model/ValidityVerdict;Lcom/thermalbench/domain/model/TerminationReason;)Lcom/thermalbench/domain/model/ResultSummary;
+	public static synthetic fun copy-nQyRXzY$default (Lcom/thermalbench/domain/model/ResultSummary;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/thermalbench/domain/model/Delegate;Ljava/lang/String;JILjava/lang/Double;Lcom/thermalbench/domain/model/ValidityVerdict;Lcom/thermalbench/domain/model/TerminationReason;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ResultSummary;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendId-XTnkX30 ()Ljava/lang/String;
+	public final fun getDelegate ()Lcom/thermalbench/domain/model/Delegate;
+	public final fun getDeviceModel ()Ljava/lang/String;
+	public final fun getLabel ()Ljava/lang/String;
+	public final fun getMeasuredIterations ()I
+	public final fun getModelName ()Ljava/lang/String;
+	public final fun getResultId-9MuE3o0 ()Ljava/lang/String;
+	public final fun getRetentionRatio ()Ljava/lang/Double;
+	public final fun getSpecId-j42B-dU ()Ljava/lang/String;
+	public final fun getStartedAtEpochMillis ()J
+	public final fun getTerminated ()Lcom/thermalbench/domain/model/TerminationReason;
+	public final fun getValidity ()Lcom/thermalbench/domain/model/ValidityVerdict;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunEnvironment {
+	public fun <init> (ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)V
+	public synthetic fun <init> (ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun component10 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun component4 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun component5 ()Z
+	public final fun component6 ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun component7 ()Ljava/lang/String;
+	public final fun component8 ()Z
+	public final fun component9 ()Ljava/lang/String;
+	public final fun copy (ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;)Lcom/thermalbench/domain/model/RunEnvironment;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunEnvironment;ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunEnvironment;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackendVersion ()Ljava/lang/String;
+	public final fun getComputeDevice ()Ljava/lang/String;
+	public final fun getConditionsAtEnd ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun getConditionsAtStart ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun getExecutionPath ()Ljava/lang/String;
+	public final fun getLiveChartEnabled ()Z
+	public final fun getPreconditionsSatisfied ()Z
+	public final fun getScreenPolicy ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun getUnmetAtStart ()Ljava/util/List;
+	public final fun getWakeLockHeld ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/model/RunProgress {
+}
+
+public final class com/thermalbench/domain/model/RunProgress$Finished : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (Lcom/thermalbench/domain/model/BenchmarkResult;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/BenchmarkResult;
+	public final fun copy (Lcom/thermalbench/domain/model/BenchmarkResult;)Lcom/thermalbench/domain/model/RunProgress$Finished;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$Finished;Lcom/thermalbench/domain/model/BenchmarkResult;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$Finished;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getResult ()Lcom/thermalbench/domain/model/BenchmarkResult;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$IterationCompleted : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (Lcom/thermalbench/domain/model/IterationSample;I)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/IterationSample;
+	public final fun component2 ()I
+	public final fun copy (Lcom/thermalbench/domain/model/IterationSample;I)Lcom/thermalbench/domain/model/RunProgress$IterationCompleted;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$IterationCompleted;Lcom/thermalbench/domain/model/IterationSample;IILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$IterationCompleted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSample ()Lcom/thermalbench/domain/model/IterationSample;
+	public final fun getTotal ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$IterationStarted : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (ILcom/thermalbench/domain/model/Phase;I)V
+	public final fun component1 ()I
+	public final fun component2 ()Lcom/thermalbench/domain/model/Phase;
+	public final fun component3 ()I
+	public final fun copy (ILcom/thermalbench/domain/model/Phase;I)Lcom/thermalbench/domain/model/RunProgress$IterationStarted;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$IterationStarted;ILcom/thermalbench/domain/model/Phase;IILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$IterationStarted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getIndex ()I
+	public final fun getPhase ()Lcom/thermalbench/domain/model/Phase;
+	public final fun getTotal ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$LoadingModel : com/thermalbench/domain/model/RunProgress {
+	public synthetic fun <init> (Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1-XTnkX30 ()Ljava/lang/String;
+	public final fun copy-XVPlxmM (Ljava/lang/String;)Lcom/thermalbench/domain/model/RunProgress$LoadingModel;
+	public static synthetic fun copy-XVPlxmM$default (Lcom/thermalbench/domain/model/RunProgress$LoadingModel;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$LoadingModel;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBackend-XTnkX30 ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$ModelLoaded : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (J)V
+	public final fun component1 ()J
+	public final fun copy (J)Lcom/thermalbench/domain/model/RunProgress$ModelLoaded;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$ModelLoaded;JILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$ModelLoaded;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getLoadNanos ()J
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$Power : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (Lcom/thermalbench/domain/model/PowerSample;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/PowerSample;
+	public final fun copy (Lcom/thermalbench/domain/model/PowerSample;)Lcom/thermalbench/domain/model/RunProgress$Power;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$Power;Lcom/thermalbench/domain/model/PowerSample;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$Power;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSample ()Lcom/thermalbench/domain/model/PowerSample;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$Thermal : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (Lcom/thermalbench/domain/model/ThermalSample;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/ThermalSample;
+	public final fun copy (Lcom/thermalbench/domain/model/ThermalSample;)Lcom/thermalbench/domain/model/RunProgress$Thermal;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$Thermal;Lcom/thermalbench/domain/model/ThermalSample;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$Thermal;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSample ()Lcom/thermalbench/domain/model/ThermalSample;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProgress$ThermalChanged : com/thermalbench/domain/model/RunProgress {
+	public fun <init> (Lcom/thermalbench/domain/model/ThermalTransition;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/ThermalTransition;
+	public final fun copy (Lcom/thermalbench/domain/model/ThermalTransition;)Lcom/thermalbench/domain/model/RunProgress$ThermalChanged;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/RunProgress$ThermalChanged;Lcom/thermalbench/domain/model/ThermalTransition;ILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProgress$ThermalChanged;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTransition ()Lcom/thermalbench/domain/model/ThermalTransition;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProtocol {
+	public static final field Companion Lcom/thermalbench/domain/model/RunProtocol$Companion;
+	public static final field SUSTAINED_LOAD_MIN_ITERATIONS I
+	public synthetic fun <init> (IIJZJJILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (IIJZJJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3-UwyO8pc ()J
+	public final fun component4 ()Z
+	public final fun component5-UwyO8pc ()J
+	public final fun component6-UwyO8pc ()J
+	public final fun copy-OgE2Bcw (IIJZJJ)Lcom/thermalbench/domain/model/RunProtocol;
+	public static synthetic fun copy-OgE2Bcw$default (Lcom/thermalbench/domain/model/RunProtocol;IIJZJJILjava/lang/Object;)Lcom/thermalbench/domain/model/RunProtocol;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAbortOnCriticalThermal ()Z
+	public final fun getInterIterationDelay-UwyO8pc ()J
+	public final fun getMaxRunDuration-UwyO8pc ()J
+	public final fun getMeasuredIterations ()I
+	public final fun getTelemetryInterval-UwyO8pc ()J
+	public final fun getTotalIterations ()I
+	public final fun getWarmupIterations ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/RunProtocol$Companion {
+	public final fun getDEFAULT ()Lcom/thermalbench/domain/model/RunProtocol;
+}
+
+public final class com/thermalbench/domain/model/ScreenPolicy : java/lang/Enum {
+	public static final field OFF Lcom/thermalbench/domain/model/ScreenPolicy;
+	public static final field ON_DIMMED Lcom/thermalbench/domain/model/ScreenPolicy;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/ScreenPolicy;
+	public static fun values ()[Lcom/thermalbench/domain/model/ScreenPolicy;
+}
+
+public final class com/thermalbench/domain/model/SemVer : java/lang/Comparable {
+	public static final field Companion Lcom/thermalbench/domain/model/SemVer$Companion;
+	public fun <init> (IIILjava/lang/String;)V
+	public synthetic fun <init> (IIILjava/lang/String;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun compareTo (Lcom/thermalbench/domain/model/SemVer;)I
+	public synthetic fun compareTo (Ljava/lang/Object;)I
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()Ljava/lang/String;
+	public final fun copy (IIILjava/lang/String;)Lcom/thermalbench/domain/model/SemVer;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/SemVer;IIILjava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/SemVer;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMajor ()I
+	public final fun getMinor ()I
+	public final fun getPatch ()I
+	public final fun getPreRelease ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/SemVer$Companion {
+	public final fun parse (Ljava/lang/String;)Lcom/thermalbench/domain/model/SemVer;
+}
+
+public final class com/thermalbench/domain/model/SensorTemperature {
+	public fun <init> (Ljava/lang/String;F)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()F
+	public final fun copy (Ljava/lang/String;F)Lcom/thermalbench/domain/model/SensorTemperature;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/SensorTemperature;Ljava/lang/String;FILjava/lang/Object;)Lcom/thermalbench/domain/model/SensorTemperature;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCelsius ()F
+	public final fun getName ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/Sha256 {
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/thermalbench/domain/model/Sha256;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getHex ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/SpecId {
+	public static final field Companion Lcom/thermalbench/domain/model/SpecId$Companion;
+	public static final field LENGTH I
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/thermalbench/domain/model/SpecId;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getValue ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/SpecId$Companion {
+	public final fun fromDigest-5m6Ud9Q (Ljava/lang/String;)Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/model/StopCondition {
+}
+
+public final class com/thermalbench/domain/model/StopCondition$TokenCount : com/thermalbench/domain/model/StopCondition {
+	public fun <init> (I)V
+	public final fun component1 ()I
+	public final fun copy (I)Lcom/thermalbench/domain/model/StopCondition$TokenCount;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/StopCondition$TokenCount;IILjava/lang/Object;)Lcom/thermalbench/domain/model/StopCondition$TokenCount;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getTokens ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/SubmissionConsent {
+	public fun <init> (ZZZJ)V
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()J
+	public final fun copy (ZZZJ)Lcom/thermalbench/domain/model/SubmissionConsent;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/SubmissionConsent;ZZZJILjava/lang/Object;)Lcom/thermalbench/domain/model/SubmissionConsent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConsentEpochMillis ()J
+	public final fun getConsentGiven ()Z
+	public final fun getIncludeDeviceModel ()Z
+	public final fun getIncludeRawIterations ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/SubmissionReceipt {
+	public fun <init> (Ljava/lang/String;JLjava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()J
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;JLjava/lang/String;)Lcom/thermalbench/domain/model/SubmissionReceipt;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/SubmissionReceipt;Ljava/lang/String;JLjava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/SubmissionReceipt;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getAcceptedEpochMillis ()J
+	public final fun getPublicUrl ()Ljava/lang/String;
+	public final fun getSubmissionId ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/TerminationReason : java/lang/Enum {
+	public static final field ABORTED_BY_USER Lcom/thermalbench/domain/model/TerminationReason;
+	public static final field COMPLETED Lcom/thermalbench/domain/model/TerminationReason;
+	public static final field ERROR Lcom/thermalbench/domain/model/TerminationReason;
+	public static final field THERMAL_CRITICAL Lcom/thermalbench/domain/model/TerminationReason;
+	public static final field TIMEOUT Lcom/thermalbench/domain/model/TerminationReason;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/TerminationReason;
+	public static fun values ()[Lcom/thermalbench/domain/model/TerminationReason;
+}
+
+public final class com/thermalbench/domain/model/ThermalSample {
+	public fun <init> (JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;)V
+	public synthetic fun <init> (JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()J
+	public final fun component2 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component3 ()Ljava/lang/Float;
+	public final fun component4 ()Ljava/lang/Integer;
+	public final fun component5 ()Ljava/util/List;
+	public final fun component6 ()Ljava/lang/Long;
+	public final fun component7 ()Ljava/util/List;
+	public final fun copy (JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;)Lcom/thermalbench/domain/model/ThermalSample;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/ThermalSample;JLcom/thermalbench/domain/model/ThermalStatus;Ljava/lang/Float;Ljava/lang/Integer;Ljava/util/List;Ljava/lang/Long;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ThermalSample;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBatteryTemperatureDeciC ()Ljava/lang/Integer;
+	public final fun getCpuFrequenciesKhz ()Ljava/util/List;
+	public final fun getElapsedNanos ()J
+	public final fun getGpuFrequencyKhz ()Ljava/lang/Long;
+	public final fun getHeadroom ()Ljava/lang/Float;
+	public final fun getSensorTemperatures ()Ljava/util/List;
+	public final fun getStatus ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ThermalStatus : java/lang/Enum {
+	public static final field CRITICAL Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field EMERGENCY Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field LIGHT Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field MODERATE Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field NONE Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field SEVERE Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field SHUTDOWN Lcom/thermalbench/domain/model/ThermalStatus;
+	public static final field UNKNOWN Lcom/thermalbench/domain/model/ThermalStatus;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public final fun isThrottling ()Z
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/ThermalStatus;
+	public static fun values ()[Lcom/thermalbench/domain/model/ThermalStatus;
+}
+
+public final class com/thermalbench/domain/model/ThermalTimeline {
+	public static final field Companion Lcom/thermalbench/domain/model/ThermalTimeline$Companion;
+	public fun <init> (Ljava/util/List;Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun component2 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;Ljava/util/List;)Lcom/thermalbench/domain/model/ThermalTimeline;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/ThermalTimeline;Ljava/util/List;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ThermalTimeline;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getSamples ()Ljava/util/List;
+	public final fun getTransitions ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ThermalTimeline$Companion {
+	public final fun getEMPTY ()Lcom/thermalbench/domain/model/ThermalTimeline;
+}
+
+public final class com/thermalbench/domain/model/ThermalTransition {
+	public fun <init> (JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)V
+	public final fun component1 ()J
+	public final fun component2 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component3 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun copy (JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)Lcom/thermalbench/domain/model/ThermalTransition;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/ThermalTransition;JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ThermalTransition;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getElapsedNanos ()J
+	public final fun getFrom ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun getTo ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ThrottleEvent {
+	public fun <init> (Ljava/lang/Integer;JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)V
+	public final fun component1 ()Ljava/lang/Integer;
+	public final fun component2 ()J
+	public final fun component3 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component4 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun copy (Ljava/lang/Integer;JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)Lcom/thermalbench/domain/model/ThrottleEvent;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/ThrottleEvent;Ljava/lang/Integer;JLcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;ILjava/lang/Object;)Lcom/thermalbench/domain/model/ThrottleEvent;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getElapsedNanos ()J
+	public final fun getFrom ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun getIterationIndex ()Ljava/lang/Integer;
+	public final fun getTo ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/model/UnmetCondition {
+	public fun getDescription ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$BatteryTooLow : com/thermalbench/domain/model/UnmetCondition {
+	public fun <init> (II)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun copy (II)Lcom/thermalbench/domain/model/UnmetCondition$BatteryTooLow;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/UnmetCondition$BatteryTooLow;IIILjava/lang/Object;)Lcom/thermalbench/domain/model/UnmetCondition$BatteryTooLow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrent ()I
+	public fun getDescription ()Ljava/lang/String;
+	public final fun getRequired ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$Charging : com/thermalbench/domain/model/UnmetCondition {
+	public static final field INSTANCE Lcom/thermalbench/domain/model/UnmetCondition$Charging;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getDescription ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$DefaultImpls {
+	public static fun getDescription (Lcom/thermalbench/domain/model/UnmetCondition;)Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$ScreenState : com/thermalbench/domain/model/UnmetCondition {
+	public fun <init> (ZLcom/thermalbench/domain/model/ScreenPolicy;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun copy (ZLcom/thermalbench/domain/model/ScreenPolicy;)Lcom/thermalbench/domain/model/UnmetCondition$ScreenState;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/UnmetCondition$ScreenState;ZLcom/thermalbench/domain/model/ScreenPolicy;ILjava/lang/Object;)Lcom/thermalbench/domain/model/UnmetCondition$ScreenState;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrent ()Z
+	public fun getDescription ()Ljava/lang/String;
+	public final fun getRequired ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$ThermalHeadroomTooLow : com/thermalbench/domain/model/UnmetCondition {
+	public fun <init> (Ljava/lang/Float;F)V
+	public final fun component1 ()Ljava/lang/Float;
+	public final fun component2 ()F
+	public final fun copy (Ljava/lang/Float;F)Lcom/thermalbench/domain/model/UnmetCondition$ThermalHeadroomTooLow;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/UnmetCondition$ThermalHeadroomTooLow;Ljava/lang/Float;FILjava/lang/Object;)Lcom/thermalbench/domain/model/UnmetCondition$ThermalHeadroomTooLow;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrent ()Ljava/lang/Float;
+	public fun getDescription ()Ljava/lang/String;
+	public final fun getRequired ()F
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/UnmetCondition$ThermalStatusTooHigh : com/thermalbench/domain/model/UnmetCondition {
+	public fun <init> (Lcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun component2 ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public final fun copy (Lcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;)Lcom/thermalbench/domain/model/UnmetCondition$ThermalStatusTooHigh;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/model/UnmetCondition$ThermalStatusTooHigh;Lcom/thermalbench/domain/model/ThermalStatus;Lcom/thermalbench/domain/model/ThermalStatus;ILjava/lang/Object;)Lcom/thermalbench/domain/model/UnmetCondition$ThermalStatusTooHigh;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCurrent ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun getDescription ()Ljava/lang/String;
+	public final fun getRequired ()Lcom/thermalbench/domain/model/ThermalStatus;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/model/ValidityVerdict : java/lang/Enum {
+	public static final field INSUFFICIENT_DATA Lcom/thermalbench/domain/model/ValidityVerdict;
+	public static final field PRECONDITIONS_UNMET Lcom/thermalbench/domain/model/ValidityVerdict;
+	public static final field VALID Lcom/thermalbench/domain/model/ValidityVerdict;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/model/ValidityVerdict;
+	public static fun values ()[Lcom/thermalbench/domain/model/ValidityVerdict;
+}
+
+public final class com/thermalbench/domain/model/Workload {
+	public synthetic fun <init> (IILjava/lang/String;Lcom/thermalbench/domain/model/StopCondition;Ljava/lang/String;Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()I
+	public final fun component2 ()I
+	public final fun component3-4oGdsSs ()Ljava/lang/String;
+	public final fun component4 ()Lcom/thermalbench/domain/model/StopCondition;
+	public final fun component5 ()Ljava/lang/String;
+	public final fun copy-KxRjg0c (IILjava/lang/String;Lcom/thermalbench/domain/model/StopCondition;Ljava/lang/String;)Lcom/thermalbench/domain/model/Workload;
+	public static synthetic fun copy-KxRjg0c$default (Lcom/thermalbench/domain/model/Workload;IILjava/lang/String;Lcom/thermalbench/domain/model/StopCondition;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/model/Workload;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getMaxOutputTokens ()I
+	public final fun getPrompt ()Ljava/lang/String;
+	public final fun getPromptSha256-4oGdsSs ()Ljava/lang/String;
+	public final fun getPromptTokens ()I
+	public final fun getStopCondition ()Lcom/thermalbench/domain/model/StopCondition;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/port/BackendRegistry {
+	public abstract fun all ()Ljava/util/List;
+	public abstract fun find-XVPlxmM (Ljava/lang/String;)Lcom/thermalbench/domain/port/InferenceBackend;
+}
+
+public abstract interface class com/thermalbench/domain/port/DegradationAnalyzer {
+	public abstract fun analyze (Ljava/util/List;Lcom/thermalbench/domain/model/ThermalTimeline;Lcom/thermalbench/domain/model/TerminationReason;ZI)Lcom/thermalbench/domain/model/DegradationProfile;
+}
+
+public abstract interface class com/thermalbench/domain/port/DeviceConditionSource {
+	public abstract fun observe-LRDsOJo (J)Lkotlinx/coroutines/flow/Flow;
+	public abstract fun snapshot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/DeviceProfiler {
+	public abstract fun profile (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/FrequencySource {
+	public abstract fun readCpuFrequenciesKhz (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun readCpuMaxFrequenciesKhz (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public fun readGpuFrequencyKhz (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/port/FrequencySource$DefaultImpls {
+	public static fun readGpuFrequencyKhz (Lcom/thermalbench/domain/port/FrequencySource;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/InferenceBackend {
+	public abstract fun capabilities (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun generate (Lcom/thermalbench/domain/model/LoadedModel;Lcom/thermalbench/domain/model/Workload;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun getId-XTnkX30 ()Ljava/lang/String;
+	public abstract fun load (Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun load$default (Lcom/thermalbench/domain/port/InferenceBackend;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+	public abstract fun unload (Lcom/thermalbench/domain/model/LoadedModel;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/port/InferenceBackend$DefaultImpls {
+	public static synthetic fun load$default (Lcom/thermalbench/domain/port/InferenceBackend;Lcom/thermalbench/domain/model/ModelRef;Lcom/thermalbench/domain/model/Delegate;Ljava/util/Map;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/LeaderboardClient {
+	public abstract fun fetch (Lcom/thermalbench/domain/model/LeaderboardFilter;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun submit (Lcom/thermalbench/domain/model/BenchmarkResult;Lcom/thermalbench/domain/model/SubmissionConsent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/MemorySource {
+	public abstract fun snapshot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/MonotonicClock {
+	public abstract fun nanos ()J
+}
+
+public abstract interface class com/thermalbench/domain/port/PowerTelemetrySource {
+	public abstract fun snapshot (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun stream-LRDsOJo (J)Lkotlinx/coroutines/flow/Flow;
+}
+
+public abstract interface class com/thermalbench/domain/port/ResultCodec {
+	public abstract fun decodeResult (Ljava/lang/String;)Lcom/thermalbench/domain/model/BenchmarkResult;
+	public abstract fun decodeSpec (Ljava/lang/String;)Lcom/thermalbench/domain/model/BenchmarkSpec;
+	public abstract fun encodeResult (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public abstract fun encodeSpec (Lcom/thermalbench/domain/model/BenchmarkSpec;)Ljava/lang/String;
+	public abstract fun resultCsv (Lcom/thermalbench/domain/model/BenchmarkResult;)Ljava/lang/String;
+	public abstract fun specDigest (Lcom/thermalbench/domain/model/BenchmarkSpec;)Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/port/ResultRepository {
+	public abstract fun delete-EgcXtFQ (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun import-dzHcmqQ (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun load-EgcXtFQ (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun loadBySpec-LA26kvk (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun observeAll ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun save-dzHcmqQ (Lcom/thermalbench/domain/model/BenchmarkResult;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/SpecRepository {
+	public abstract fun load-LA26kvk (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun observeAll ()Lkotlinx/coroutines/flow/Flow;
+	public abstract fun save (Lcom/thermalbench/domain/model/BenchmarkSpec;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/ThermalTelemetrySource {
+	public abstract fun currentStatus (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun headroom (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun poll-LRDsOJo (J)Lkotlinx/coroutines/flow/Flow;
+	public fun sensorTemperatures (Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public abstract fun transitions ()Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/thermalbench/domain/port/ThermalTelemetrySource$DefaultImpls {
+	public static fun sensorTemperatures (Lcom/thermalbench/domain/port/ThermalTelemetrySource;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public abstract interface class com/thermalbench/domain/port/WallClock {
+	public abstract fun epochMillis ()J
+}
+
+public final class com/thermalbench/domain/usecase/AnalyzeDegradationUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/DegradationAnalyzer;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/BenchmarkResult;)Lcom/thermalbench/domain/model/DegradationProfile;
+	public final fun reanalyze (Lcom/thermalbench/domain/model/BenchmarkResult;)Lcom/thermalbench/domain/model/BenchmarkResult;
+}
+
+public final class com/thermalbench/domain/usecase/AwaitPreconditionsUseCase {
+	public synthetic fun <init> (Lcom/thermalbench/domain/port/DeviceConditionSource;Lcom/thermalbench/domain/port/MonotonicClock;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lcom/thermalbench/domain/port/DeviceConditionSource;Lcom/thermalbench/domain/port/MonotonicClock;JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/PreconditionPolicy;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/thermalbench/domain/usecase/CompareBackendsUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/ResultRepository;)V
+	public final fun fromResults-RS_6iGg (Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/BackendComparison;
+	public final fun invoke-aYn1NH0 (Ljava/lang/String;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun invoke-aYn1NH0$default (Lcom/thermalbench/domain/usecase/CompareBackendsUseCase;Ljava/lang/String;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/usecase/CompareDevicesUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/ResultRepository;)V
+	public final fun fromResults-LA26kvk (Ljava/lang/String;Ljava/util/List;)Lcom/thermalbench/domain/model/DeviceComparison;
+	public final fun invoke-RS_6iGg (Ljava/lang/String;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public static synthetic fun invoke-RS_6iGg$default (Lcom/thermalbench/domain/usecase/CompareDevicesUseCase;Ljava/lang/String;ZLkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/usecase/ExportFormat : java/lang/Enum {
+	public static final field CSV Lcom/thermalbench/domain/usecase/ExportFormat;
+	public static final field JSON Lcom/thermalbench/domain/usecase/ExportFormat;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lcom/thermalbench/domain/usecase/ExportFormat;
+	public static fun values ()[Lcom/thermalbench/domain/usecase/ExportFormat;
+}
+
+public final class com/thermalbench/domain/usecase/ExportResultUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/ResultCodec;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/BenchmarkResult;Lcom/thermalbench/domain/usecase/ExportFormat;)Lcom/thermalbench/domain/usecase/ExportedDocument;
+}
+
+public final class com/thermalbench/domain/usecase/ExportedDocument {
+	public fun <init> (Lcom/thermalbench/domain/usecase/ExportFormat;Ljava/lang/String;Ljava/lang/String;)V
+	public final fun component1 ()Lcom/thermalbench/domain/usecase/ExportFormat;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Ljava/lang/String;
+	public final fun copy (Lcom/thermalbench/domain/usecase/ExportFormat;Ljava/lang/String;Ljava/lang/String;)Lcom/thermalbench/domain/usecase/ExportedDocument;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/ExportedDocument;Lcom/thermalbench/domain/usecase/ExportFormat;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/usecase/ExportedDocument;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getContent ()Ljava/lang/String;
+	public final fun getFileName ()Ljava/lang/String;
+	public final fun getFormat ()Lcom/thermalbench/domain/usecase/ExportFormat;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/usecase/GenerationStalledException : java/lang/Exception {
+	public synthetic fun <init> (IJLkotlin/jvm/internal/DefaultConstructorMarker;)V
+}
+
+public final class com/thermalbench/domain/usecase/ImportResultUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/ResultRepository;)V
+	public final fun invoke-dzHcmqQ (Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/usecase/RunContext {
+	public fun <init> (ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;Z)V
+	public final fun component1 ()Z
+	public final fun component2 ()Ljava/util/List;
+	public final fun component3 ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun component4 ()Z
+	public final fun component5 ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun component6 ()Ljava/lang/String;
+	public final fun component7 ()Z
+	public final fun copy (ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;Z)Lcom/thermalbench/domain/usecase/RunContext;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/RunContext;ZLjava/util/List;Lcom/thermalbench/domain/model/DeviceConditions;ZLcom/thermalbench/domain/model/ScreenPolicy;Ljava/lang/String;ZILjava/lang/Object;)Lcom/thermalbench/domain/usecase/RunContext;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getConditionsAtStart ()Lcom/thermalbench/domain/model/DeviceConditions;
+	public final fun getExecutionPath ()Ljava/lang/String;
+	public final fun getLiveChartEnabled ()Z
+	public final fun getPreconditionsSatisfied ()Z
+	public final fun getScreenPolicy ()Lcom/thermalbench/domain/model/ScreenPolicy;
+	public final fun getUnmetAtStart ()Ljava/util/List;
+	public final fun getWakeLockHeld ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/usecase/RunSustainedBenchmarkUseCase {
+	public static final field Companion Lcom/thermalbench/domain/usecase/RunSustainedBenchmarkUseCase$Companion;
+	public static final field SCHEMA_VERSION I
+	public synthetic fun <init> (Lcom/thermalbench/domain/port/BackendRegistry;Lcom/thermalbench/domain/port/ThermalTelemetrySource;Lcom/thermalbench/domain/port/PowerTelemetrySource;Lcom/thermalbench/domain/port/FrequencySource;Lcom/thermalbench/domain/port/MemorySource;Lcom/thermalbench/domain/port/DeviceConditionSource;Lcom/thermalbench/domain/port/DeviceProfiler;Lcom/thermalbench/domain/port/DegradationAnalyzer;Lcom/thermalbench/domain/port/MonotonicClock;Lcom/thermalbench/domain/port/WallClock;Lkotlin/jvm/functions/Function0;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;JILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (Lcom/thermalbench/domain/port/BackendRegistry;Lcom/thermalbench/domain/port/ThermalTelemetrySource;Lcom/thermalbench/domain/port/PowerTelemetrySource;Lcom/thermalbench/domain/port/FrequencySource;Lcom/thermalbench/domain/port/MemorySource;Lcom/thermalbench/domain/port/DeviceConditionSource;Lcom/thermalbench/domain/port/DeviceProfiler;Lcom/thermalbench/domain/port/DegradationAnalyzer;Lcom/thermalbench/domain/port/MonotonicClock;Lcom/thermalbench/domain/port/WallClock;Lkotlin/jvm/functions/Function0;Lkotlinx/coroutines/CoroutineDispatcher;Lkotlinx/coroutines/CoroutineDispatcher;JLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/BenchmarkSpec;Lcom/thermalbench/domain/usecase/RunContext;)Lkotlinx/coroutines/flow/Flow;
+}
+
+public final class com/thermalbench/domain/usecase/RunSustainedBenchmarkUseCase$Companion {
+}
+
+public final class com/thermalbench/domain/usecase/RunSustainedBenchmarkUseCaseKt {
+	public static final fun elapsedSince (Ljava/util/List;J)Lkotlin/time/Duration;
+	public static final fun withStallLimit-rnQQ1Ag (JLkotlinx/coroutines/CoroutineDispatcher;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/usecase/SpecProblem {
+	public fun <init> (Ljava/lang/String;Ljava/lang/String;Z)V
+	public synthetic fun <init> (Ljava/lang/String;Ljava/lang/String;ZILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/lang/String;
+	public final fun component3 ()Z
+	public final fun copy (Ljava/lang/String;Ljava/lang/String;Z)Lcom/thermalbench/domain/usecase/SpecProblem;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/SpecProblem;Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Lcom/thermalbench/domain/usecase/SpecProblem;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getFatal ()Z
+	public final fun getField ()Ljava/lang/String;
+	public final fun getMessage ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/usecase/SpecValidation {
+}
+
+public final class com/thermalbench/domain/usecase/SpecValidation$Invalid : com/thermalbench/domain/usecase/SpecValidation {
+	public fun <init> (Ljava/util/List;)V
+	public final fun component1 ()Ljava/util/List;
+	public final fun copy (Ljava/util/List;)Lcom/thermalbench/domain/usecase/SpecValidation$Invalid;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/SpecValidation$Invalid;Ljava/util/List;ILjava/lang/Object;)Lcom/thermalbench/domain/usecase/SpecValidation$Invalid;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getProblems ()Ljava/util/List;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/usecase/SpecValidation$Valid : com/thermalbench/domain/usecase/SpecValidation {
+	public static final field INSTANCE Lcom/thermalbench/domain/usecase/SpecValidation$Valid;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public abstract interface class com/thermalbench/domain/usecase/SubmissionOutcome {
+}
+
+public final class com/thermalbench/domain/usecase/SubmissionOutcome$Refused : com/thermalbench/domain/usecase/SubmissionOutcome {
+	public fun <init> (Ljava/lang/String;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun copy (Ljava/lang/String;)Lcom/thermalbench/domain/usecase/SubmissionOutcome$Refused;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/SubmissionOutcome$Refused;Ljava/lang/String;ILjava/lang/Object;)Lcom/thermalbench/domain/usecase/SubmissionOutcome$Refused;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReason ()Ljava/lang/String;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/usecase/SubmissionOutcome$Submitted : com/thermalbench/domain/usecase/SubmissionOutcome {
+	public fun <init> (Lcom/thermalbench/domain/model/SubmissionReceipt;)V
+	public final fun component1 ()Lcom/thermalbench/domain/model/SubmissionReceipt;
+	public final fun copy (Lcom/thermalbench/domain/model/SubmissionReceipt;)Lcom/thermalbench/domain/usecase/SubmissionOutcome$Submitted;
+	public static synthetic fun copy$default (Lcom/thermalbench/domain/usecase/SubmissionOutcome$Submitted;Lcom/thermalbench/domain/model/SubmissionReceipt;ILjava/lang/Object;)Lcom/thermalbench/domain/usecase/SubmissionOutcome$Submitted;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getReceipt ()Lcom/thermalbench/domain/model/SubmissionReceipt;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/thermalbench/domain/usecase/SubmitToLeaderboardUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/LeaderboardClient;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/BenchmarkResult;Lcom/thermalbench/domain/model/SubmissionConsent;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class com/thermalbench/domain/usecase/ValidateSpecUseCase {
+	public fun <init> (Lcom/thermalbench/domain/port/BackendRegistry;)V
+	public final fun invoke (Lcom/thermalbench/domain/model/BenchmarkSpec;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+

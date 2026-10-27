@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- llama.cpp's OpenCL backend uses the GPU vendor's libOpenCL.so. Since
+             Android 12 an app may load a vendor library only if it declares it.
+             Not required: on a device without one, the OpenCL backend is skipped
+             and llama.cpp runs on Vulkan or the CPU. -->
+        <uses-native-library
+            android:name="libOpenCL.so"
+            android:required="false" />
+    </application>
+</manifest>
