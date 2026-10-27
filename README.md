@@ -14,6 +14,8 @@ and measures how much of its peak speed the phone actually keeps.
 
 <img src="DOCS/pixel6-cpu-gpu.png" alt="Gemma 3 1B on a Pixel 6: decode speed and battery temperature over a sustained run, CPU versus GPU" width="720">
 
+<img src="DOCS/honor-vs-pixel-cpu.png" alt="Honor Magic V3 vs Pixel 6, Gemma 3 1B on the CPU under sustained load" width="720">
+
 </div>
 
 ### What it measures
