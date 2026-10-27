@@ -146,6 +146,7 @@ class BenchmarkService : Service() {
             cues.sayAndWait("ThermalBench: the run stopped with an error.")
         } finally {
             RunState.series.value = null
+            RunState.screenPolicy.value = null
             cues.release()
             releaseWakeLock()
             ServiceCompat.stopForeground(this, ServiceCompat.STOP_FOREGROUND_REMOVE)
@@ -161,6 +162,8 @@ class BenchmarkService : Service() {
         onIteration: () -> Unit,
     ): BenchmarkResult {
         val spec = specs.load(specId) ?: error("Spec $specId not found")
+        // Before the gate, which itself waits for the screen to be as the spec says.
+        RunState.screenPolicy.value = spec.preconditions.screenPolicy
         // "Run 2 of 3 · " ahead of the notification text during a comparison.
         val prefix = position?.let { "${it.label} · " }.orEmpty()
         val gate = awaitGate(spec, prefix)

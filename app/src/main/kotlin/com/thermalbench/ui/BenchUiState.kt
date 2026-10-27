@@ -33,6 +33,8 @@ data class SpecForm(
     val abortOnCriticalThermal: Boolean = true,
     val requireUnplugged: Boolean = true,
     val minBatteryPercent: Int = 50,
+    /** Run with the screen on at minimum brightness instead of off. */
+    val screenOn: Boolean = false,
     val label: String = "",
     /** Which GPU API a GPU run uses, where the backend offers a choice; null otherwise. */
     val gpuApi: String? = null,

@@ -2,6 +2,7 @@ package com.thermalbench.runner
 
 import android.content.Context
 import com.thermalbench.domain.model.RunProgress
+import com.thermalbench.domain.model.ScreenPolicy
 import com.thermalbench.domain.model.SpecId
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.SharedFlow
@@ -20,6 +21,8 @@ class ServiceRunController @Inject constructor(
     override val progress: SharedFlow<RunProgress> = BenchmarkService.events
 
     override val series: StateFlow<SeriesPosition?> = RunState.series
+
+    override val screenPolicy: StateFlow<ScreenPolicy?> = RunState.screenPolicy
 
     override fun startSeries(specIds: List<SpecId>) = BenchmarkService.start(context, specIds)
 

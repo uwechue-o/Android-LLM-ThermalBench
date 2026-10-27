@@ -31,6 +31,8 @@ fun PreconditionGateScreen(
     state: BenchUiState.Preconditioning,
     onIntent: (BenchIntent) -> Unit,
     modifier: Modifier = Modifier,
+    /** The run keeps the screen on rather than waiting for it to go off. */
+    screenOn: Boolean = false,
 ) {
     Column(
         modifier = modifier
@@ -84,15 +86,24 @@ fun PreconditionGateScreen(
             }
         }
 
-        // Turning the screen on to check restarts the window, so say up front
-        // that there is no need to.
-        Text(
-            "You can turn the screen off and listen instead. While the phone cools, it reads out the " +
-                "headroom margin every 20 seconds, says when it is halfway and when it is cool enough, " +
-                "and announces the end of the run. It stays quiet while measuring. Media volume " +
-                "controls it.",
-            style = MaterialTheme.typography.bodySmall,
-        )
+        if (screenOn) {
+            // A screen-on run is held on and dimmed by the app, so it has to stay in front.
+            Text(
+                "This run keeps the screen on, dimmed. Leave the app open: switching away " +
+                    "or turning the screen off makes it a different measurement.",
+                style = MaterialTheme.typography.bodySmall,
+            )
+        } else {
+            // Turning the screen on to check restarts the window, so say up front
+            // that there is no need to.
+            Text(
+                "You can turn the screen off and listen instead. While the phone cools, it reads out the " +
+                    "headroom margin every 20 seconds, says when it is halfway and when it is cool enough, " +
+                    "and announces the end of the run. It stays quiet while measuring. Media volume " +
+                    "controls it.",
+                style = MaterialTheme.typography.bodySmall,
+            )
+        }
 
         OutlinedButton(onClick = { onIntent(BenchIntent.Abort) }) { Text("Cancel") }
     }

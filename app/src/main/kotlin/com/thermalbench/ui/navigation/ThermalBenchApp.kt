@@ -1,5 +1,7 @@
 package com.thermalbench.ui.navigation
 
+import android.app.Activity
+import android.view.WindowManager
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,15 +20,18 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.thermalbench.domain.model.ResultSummary
+import com.thermalbench.domain.model.ScreenPolicy
 import com.thermalbench.ui.BenchIntent
 import com.thermalbench.ui.BenchUiState
 import com.thermalbench.ui.BenchViewModel
@@ -55,6 +60,8 @@ fun ThermalBenchApp(viewModel: BenchViewModel = hiltViewModel()) {
     LaunchedEffect(viewModel) {
         viewModel.shares.collect { chooser -> context.startActivity(chooser) }
     }
+    val screenPolicy by viewModel.screenPolicy.collectAsStateWithLifecycle()
+    if (screenPolicy == ScreenPolicy.ON_DIMMED) KeepScreenOnDimmed()
     // "Run 2 of 3" in the title while a comparison is under way.
     val title = listOfNotNull(titleFor(state), series?.label.takeIf { state.isRunPhase() }).joinToString(" · ")
 
@@ -69,7 +76,11 @@ fun ThermalBenchApp(viewModel: BenchViewModel = hiltViewModel()) {
                 )
                 BenchUiState.Licences -> LicencesScreen(viewModel::onIntent)
                 is BenchUiState.Composing -> SpecComposerScreen(current, viewModel::onIntent)
-                is BenchUiState.Preconditioning -> PreconditionGateScreen(current, viewModel::onIntent)
+                is BenchUiState.Preconditioning -> PreconditionGateScreen(
+                    current,
+                    viewModel::onIntent,
+                    screenOn = screenPolicy == ScreenPolicy.ON_DIMMED,
+                )
                 is BenchUiState.Warmup -> WarmupScreen(current)
                 is BenchUiState.Running -> LiveRunScreen(current, viewModel::onIntent)
                 is BenchUiState.Complete -> ResultDetailScreen(current, viewModel::onIntent)
@@ -91,6 +102,30 @@ private fun titleFor(state: BenchUiState): String = when (state) {
     is BenchUiState.SeriesComplete -> "Comparison"
     is BenchUiState.Aborted -> if (state.cancelled) "Run cancelled" else "Run aborted"
 }
+
+/**
+ * Holds the screen on at minimum brightness for as long as it is composed: a
+ * screen-on run must not time out into a screen-off one halfway through, and
+ * a bright display would add heat the run is not meant to measure.
+ */
+@Composable
+private fun KeepScreenOnDimmed() {
+    val view = LocalView.current
+    DisposableEffect(view) {
+        val window = (view.context as? Activity)?.window
+        view.keepScreenOn = true
+        window?.attributes = window?.attributes?.apply { screenBrightness = MIN_BRIGHTNESS }
+        onDispose {
+            view.keepScreenOn = false
+            window?.attributes = window?.attributes?.apply {
+                screenBrightness = WindowManager.LayoutParams.BRIGHTNESS_OVERRIDE_NONE
+            }
+        }
+    }
+}
+
+// Not 0: some devices treat zero as "screen off".
+private const val MIN_BRIGHTNESS = 0.01f
 
 private fun BenchUiState.isRunPhase(): Boolean =
     this is BenchUiState.Preconditioning || this is BenchUiState.Warmup || this is BenchUiState.Running

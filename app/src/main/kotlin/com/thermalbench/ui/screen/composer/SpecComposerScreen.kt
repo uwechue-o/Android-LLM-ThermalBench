@@ -290,6 +290,16 @@ private fun SpecComposerContent(
                             "A run that starts outside these bounds is recorded as invalid, not adjusted.",
                         style = MaterialTheme.typography.bodySmall,
                     )
+                    SwitchRow(
+                        label = "Keep the screen on, dimmed",
+                        checked = form.screenOn,
+                        onChange = { onIntent(BenchIntent.UpdateForm(form.copy(screenOn = it))) },
+                    )
+                    Text(
+                        "Off by default: the display is a heat source too. Some phones hold back " +
+                            "work while the screen is off, and this is how to tell. Leave the app open.",
+                        style = MaterialTheme.typography.bodySmall,
+                    )
                 }
             }
         }

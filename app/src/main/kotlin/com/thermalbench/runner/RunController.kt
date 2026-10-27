@@ -3,6 +3,7 @@ package com.thermalbench.runner
 import com.thermalbench.domain.model.BenchmarkResult
 import com.thermalbench.domain.model.PreconditionState
 import com.thermalbench.domain.model.RunProgress
+import com.thermalbench.domain.model.ScreenPolicy
 import com.thermalbench.domain.model.SpecId
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -22,6 +23,9 @@ interface RunController {
 
     /** Which run of a comparison is under way; null for a single run. */
     val series: StateFlow<SeriesPosition?>
+
+    /** The screen policy of the run waiting or under way; null when none is. */
+    val screenPolicy: StateFlow<ScreenPolicy?>
 
     fun start(specId: SpecId) = startSeries(listOf(specId))
 
@@ -64,4 +68,7 @@ object RunState {
 
     /** Null for a single run. */
     val series = MutableStateFlow<SeriesPosition?>(null)
+
+    /** Null when no run is waiting or under way. */
+    val screenPolicy = MutableStateFlow<ScreenPolicy?>(null)
 }

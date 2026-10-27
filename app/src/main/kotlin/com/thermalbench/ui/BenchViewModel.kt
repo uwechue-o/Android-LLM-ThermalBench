@@ -18,6 +18,7 @@ import com.thermalbench.domain.model.PreconditionState
 import com.thermalbench.domain.model.RunProgress
 import com.thermalbench.domain.model.ResultId
 import com.thermalbench.domain.model.RunProtocol
+import com.thermalbench.domain.model.ScreenPolicy
 import com.thermalbench.domain.model.Sha256
 import com.thermalbench.domain.model.SpecId
 import com.thermalbench.domain.model.TerminationReason
@@ -79,6 +80,9 @@ class BenchViewModel @Inject constructor(
 
     /** Which run of a comparison is under way; null for a single run. */
     val series = runController.series
+
+    /** The screen policy of the run waiting or under way; null when none is. */
+    val screenPolicy = runController.screenPolicy
 
     val history = results.observeAll()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(STOP_TIMEOUT_MILLIS), emptyList())
@@ -566,6 +570,7 @@ internal fun SpecForm.toSpec(codec: JsonResultCodec): BenchmarkSpec {
             preconditions = PreconditionPolicy.DEFAULT.copy(
                 requireUnplugged = requireUnplugged,
                 minBatteryPercent = minBatteryPercent,
+                screenPolicy = if (screenOn) ScreenPolicy.ON_DIMMED else ScreenPolicy.OFF,
             ),
             seed = DEFAULT_SEED,
             toolVersion = Fixtures.TOOL_VERSION,
