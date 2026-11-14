@@ -2,6 +2,7 @@ package com.thermalbench.report
 
 import com.thermalbench.domain.model.BackendRef
 import com.thermalbench.domain.model.BenchmarkResult
+import com.thermalbench.domain.model.DegradationProfile
 import com.thermalbench.domain.model.ValidityVerdict
 import com.thermalbench.ui.PerformanceSeries
 import com.thermalbench.ui.performanceSeries
@@ -58,12 +59,16 @@ fun BenchmarkResult.reportContent(zone: ZoneId = ZoneId.systemDefault()): Report
 private fun BenchmarkResult.headline(): List<Pair<String, String>> {
     val profile = profile
     return listOf(
-        "Throughput retained" to (profile?.retentionRatio?.let { percent(it) } ?: "—"),
+        "Throughput retained" to (profile?.retentionRatio?.let { percent(it) + overstated(profile) } ?: "—"),
         "Peak decode" to (profile?.peakDecodeTokensPerSecond?.let { "${decimal(it)} tok/s" } ?: "—"),
         "Steady state" to (profile?.steadyStateTokensPerSecond?.let { "${decimal(it)} tok/s" } ?: "never stable"),
         "First throttle" to (profile?.iterationsToFirstThrottle?.let { "iteration $it" } ?: "never"),
     )
 }
+
+/** A peak measured while already throttled makes the ratio flatter than the device is. */
+private fun overstated(profile: DegradationProfile): String =
+    if (profile.throttledBeforeMeasurement) " (overstated)" else ""
 
 private fun BenchmarkResult.runSection(): ReportSection {
     val profile = profile
@@ -77,6 +82,10 @@ private fun BenchmarkResult.runSection(): ReportSection {
                     "${decimal(it.meanDecodeTokensPerSecond)} / ${decimal(it.minDecodeTokensPerSecond)} tok/s"
             },
             profile?.let { "TTFT drift" to "${decimal(it.ttftDriftMicrosPerIteration)} µs/iteration" },
+            profile?.takeIf { it.throttledBeforeMeasurement }?.let {
+                "Throttled before measurement" to
+                    "yes: peak is a throttled speed, so retained is overstated"
+            },
             "Ended" to terminated.name,
             profile?.batteryDrainPercent?.let { "Battery drain" to "$it%" },
             environment.computeDevice?.let { "Ran on" to it },

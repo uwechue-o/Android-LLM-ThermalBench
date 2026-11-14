@@ -123,6 +123,17 @@ class ReportContentTest {
     }
 
     @Test
+    fun `a run already throttling when measurement began marks retention as overstated`() {
+        val content = result(profile.copy(throttledBeforeMeasurement = true)).reportContent(ZoneOffset.UTC)
+        assertThat(content.headline.first()).isEqualTo("Throughput retained" to "63.9% (overstated)")
+        val run = content.sections.single { it.title == "Run" }.rows.toMap()
+        assertThat(run["Throttled before measurement"]).startsWith("yes")
+
+        val cool = result(profile).reportContent(ZoneOffset.UTC)
+        assertThat(cool.sections.single { it.title == "Run" }.rows.toMap()).doesNotContainKey("Throttled before measurement")
+    }
+
+    @Test
     fun `a run with no profile says so instead of printing zeros`() {
         val content = result(profile = null).reportContent(ZoneOffset.UTC)
         assertThat(content.verdict).isEqualTo("No result: COMPLETED")

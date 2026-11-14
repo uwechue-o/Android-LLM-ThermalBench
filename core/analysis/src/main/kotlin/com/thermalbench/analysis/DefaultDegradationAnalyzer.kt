@@ -113,6 +113,7 @@ class DefaultDegradationAnalyzer(
             minDecodeTokensPerSecond = decode.min(),
             batteryDrainPercent = batteryDrain,
             batteryTemperatureRiseDeciC = tempRise,
+            throttledBeforeMeasurement = first.thermalStatusAtStart.isThrottling,
         )
     }
 

@@ -45,4 +45,12 @@ data class DegradationProfile(
     val minDecodeTokensPerSecond: Double,
     val batteryDrainPercent: Int?,
     val batteryTemperatureRiseDeciC: Int?,
+    /**
+     * The device was already throttling when the first measured iteration
+     * started, so [peakDecodeTokensPerSecond] is a throttled speed and
+     * [retentionRatio] compares throttled with throttled: it is overstated,
+     * not wrong. Seen on a Galaxy Tab S7+, MODERATE during warm-up: 98%
+     * retained, about 77% against its speed from a cool start.
+     */
+    val throttledBeforeMeasurement: Boolean = false,
 )

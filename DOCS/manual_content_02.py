@@ -1190,11 +1190,17 @@ DOCUMENT = [
              "the measured window, but the throttling happened during the 43-second warm-up, "
              "which the analysis ignores. The warm-up answers ran at 20.3, 19.5 and 18.5 tok/s. "
              "A 74-second test run earlier, from a less heat-soaked start, opened at 25.6. "
-             "Against that, the tablet keeps about 77%, close to the Honor's 76%. The profile "
-             "does give it away: <font face='Courier'>iterationsToFirstThrottle</font> is 0 and "
-             "<font face='Courier'>timeToFirstThrottleMillis</font> is 16397. When either "
-             "shows throttling before the first measured answer, treat the peak, and so the "
-             "retention ratio, as an upper bound. I'd like the analysis to flag this itself."),
+             "Against that, the tablet keeps about 77%, close to the Honor's 76%. The analysis "
+             "now flags this case: when the first measured iteration starts with the status "
+             "already above NONE, the profile sets "
+             "<font face='Courier'>throttledBeforeMeasurement</font> to true. The result "
+             "screen and the report then mark Retained as overstated, and "
+             "<font face='Courier'>thermalbench-analyze compare</font> stars it, with a "
+             "matching column in the CSV. The flag doesn't change the ratio or the validity "
+             "verdict. The ratio is still correct for the measured window; it just can't be "
+             "read as speed kept from a cool start. Older result files don't carry the flag; "
+             "run <font face='Courier'>thermalbench-analyze reanalyze --write</font> on them "
+             "to add it."),
         ],
     },
 

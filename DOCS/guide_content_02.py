@@ -598,9 +598,10 @@ DOCUMENT = [
              "That early slowdown fools the headline number. The tablet's result says it "
              "kept 98% of its speed, because it had already slowed down during the three "
              "warm-up answers the tool throws away. A short test from a cooler start opened at "
-             "25.6 tokens a second; measured from there, it kept about 77%. When a result "
-             "shows the phone slowing down before the first measured answer, read Retained as "
-             "a best case. This run is also labelled <b>Conditions not met</b>, because the "
+             "25.6 tokens a second; measured from there, it kept about 77%. The tool now "
+             "catches this for you: when the device is already slowing down at the first "
+             "measured answer, the result screen and the report mark Retained as "
+             "<b>overstated</b>. Read it as a best case. This run is also labelled <b>Conditions not met</b>, because the "
              "tablet never passed the start check (see Running a measurement)."),
 
             ("h2", "The trust label"),

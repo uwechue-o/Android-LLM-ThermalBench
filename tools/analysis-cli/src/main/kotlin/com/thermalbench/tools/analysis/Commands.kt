@@ -52,6 +52,11 @@ class SummaryCommand : CliktCommand(name = "summary") {
             terminal.println("   peak        ${profile.peakDecodeTokensPerSecond.fmt(1)} tok/s")
             terminal.println("   steady      ${profile.steadyStateTokensPerSecond.fmt(1)} tok/s")
             terminal.println("   retained    ${profile.retentionRatio.pct()}")
+            if (profile.throttledBeforeMeasurement) {
+                terminal.println(
+                    TextColors.yellow("               overstated: already throttling when measurement began"),
+                )
+            }
             terminal.println("   throttle    ${profile.iterationsToFirstThrottle?.let { "iteration $it" } ?: "never"}")
             terminal.println("   validity    ${verdictColor(profile.validity)}")
         }
@@ -112,7 +117,7 @@ class CompareCommand : CliktCommand(name = "compare") {
                             "${result.spec.backend.id.value}/${result.spec.backend.delegate.name}",
                             profile.peakDecodeTokensPerSecond.fmt(1),
                             profile.steadyStateTokensPerSecond.fmt(1),
-                            profile.retentionRatio.pct(),
+                            profile.retentionRatio.pct() + if (profile.throttledBeforeMeasurement) " *" else "",
                             profile.iterationsToFirstThrottle?.toString() ?: "none",
                             profile.measuredIterationCount.toString(),
                             profile.validity.name,
@@ -121,9 +126,17 @@ class CompareCommand : CliktCommand(name = "compare") {
                 }
             },
         )
+        // A device that throttles earliest would otherwise top a table sorted by retention.
+        if (rows.any { (_, profile) -> profile.throttledBeforeMeasurement }) {
+            terminal.println(
+                TextColors.yellow(
+                    "* Already throttling when measurement began: peak is a throttled speed, so retained is overstated.",
+                ),
+            )
+        }
 
         csv?.let { target ->
-            val header = "device,soc,backend,delegate,peak_tps,steady_tps,retention,iterations_to_throttle,n,validity"
+            val header = "device,soc,backend,delegate,peak_tps,steady_tps,retention,iterations_to_throttle,n,validity,throttled_before_measurement"
             val lines = rows.joinToString("\n") { (result, profile) ->
                 listOf(
                     "${result.device.manufacturer} ${result.device.model}",
@@ -136,6 +149,7 @@ class CompareCommand : CliktCommand(name = "compare") {
                     profile.iterationsToFirstThrottle?.toString() ?: "",
                     profile.measuredIterationCount.toString(),
                     profile.validity.name,
+                    profile.throttledBeforeMeasurement.toString(),
                 ).joinToString(",") { field -> if (field.contains(',')) "\"$field\"" else field }
             }
             target.writeText("$header\n$lines\n")
@@ -168,6 +182,9 @@ class ReanalyzeCommand : CliktCommand(name = "reanalyze") {
                         // Worth surfacing loudly: the analysis code changed since
                         // the run, so published numbers may need a correction.
                         append(TextColors.yellow(" (was ${stored.retentionRatio.pct()})"))
+                    }
+                    if (recomputed.throttledBeforeMeasurement) {
+                        append(TextColors.yellow(" overstated: already throttling when measurement began"))
                     }
                 },
             )

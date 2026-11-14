@@ -61,7 +61,12 @@ fun ResultDetailScreen(
         MeasurementTile(
             label = "Sustained throughput retained",
             value = profile.retentionRatio.formatPercentOrDash(),
-            caption = "Steady state divided by peak. The headline number.",
+            caption = if (profile.throttledBeforeMeasurement) {
+                "Steady state divided by peak. Likely overstated: the device was already " +
+                    "throttling when measurement began, so the peak is a throttled speed."
+            } else {
+                "Steady state divided by peak. The headline number."
+            },
             modifier = Modifier.fillMaxWidth(),
         )
 
@@ -87,6 +92,9 @@ fun ResultDetailScreen(
         Card(Modifier.fillMaxWidth()) {
             Column(Modifier.padding(16.dp)) {
                 Text("Throttling", style = MaterialTheme.typography.titleSmall)
+                if (profile.throttledBeforeMeasurement) {
+                    KeyValueRow("Throttling at first measured iteration", "yes, began during warm-up")
+                }
                 KeyValueRow(
                     "Iterations to first throttle",
                     profile.iterationsToFirstThrottle?.toString() ?: "never throttled",

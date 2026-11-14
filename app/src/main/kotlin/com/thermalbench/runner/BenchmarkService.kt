@@ -273,6 +273,9 @@ class BenchmarkService : Service() {
     private fun finishedAnnouncement(result: BenchmarkResult): String = buildString {
         append("ThermalBench: run finished.")
         result.profile?.retentionRatio?.let { append(" Retained ${(it * PERCENT).roundToInt()} percent.") }
+        if (result.profile?.throttledBeforeMeasurement == true) {
+            append(" Already throttling when measurement began, so that is overstated.")
+        }
     }
 
     /** [percent], when known, draws the cool-down as a progress bar. */

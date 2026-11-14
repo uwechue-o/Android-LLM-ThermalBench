@@ -232,6 +232,7 @@ data class DegradationProfileDocument(
     val minDecodeTokensPerSecond: Double,
     val batteryDrainPercent: Int? = null,
     val batteryTemperatureRiseDeciC: Int? = null,
+    val throttledBeforeMeasurement: Boolean = false,
 )
 
 @Serializable

@@ -100,6 +100,20 @@ class DefaultDegradationAnalyzerTest {
     }
 
     @Test
+    fun `a run that throttled during warm-up is flagged`() {
+        // As on a Galaxy Tab S7+: MODERATE 16 s in, during the three warm-up
+        // iterations, so every measured iteration ran throttled.
+        val cool = analyzer.analyze(syntheticRun(), ThermalTimeline.EMPTY, TerminationReason.COMPLETED, true, 50)
+        assertThat(cool.throttledBeforeMeasurement).isFalse()
+
+        val hot = syntheticRun().map { it.copy(thermalStatusAtStart = ThermalStatus.MODERATE, thermalStatusAtEnd = ThermalStatus.MODERATE) }
+        val profile = analyzer.analyze(hot, ThermalTimeline.EMPTY, TerminationReason.COMPLETED, true, 50)
+        assertThat(profile.throttledBeforeMeasurement).isTrue()
+        // A finding about the number, not a defect in the run.
+        assertThat(profile.validity).isEqualTo(ValidityVerdict.VALID)
+    }
+
+    @Test
     fun `unmet preconditions make the result invalid regardless of data`() {
         val profile = analyzer.analyze(syntheticRun(), ThermalTimeline.EMPTY, TerminationReason.COMPLETED, false, 50)
         assertThat(profile.validity).isEqualTo(ValidityVerdict.PRECONDITIONS_UNMET)

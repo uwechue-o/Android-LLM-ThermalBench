@@ -227,6 +227,7 @@ object Mappers {
         minDecodeTokensPerSecond = minDecodeTokensPerSecond,
         batteryDrainPercent = batteryDrainPercent,
         batteryTemperatureRiseDeciC = batteryTemperatureRiseDeciC,
+        throttledBeforeMeasurement = throttledBeforeMeasurement,
     )
 
     fun DegradationProfileDocument.toDomain() = DegradationProfile(
@@ -247,6 +248,7 @@ object Mappers {
         minDecodeTokensPerSecond = minDecodeTokensPerSecond,
         batteryDrainPercent = batteryDrainPercent,
         batteryTemperatureRiseDeciC = batteryTemperatureRiseDeciC,
+        throttledBeforeMeasurement = throttledBeforeMeasurement,
     )
 
     // ---- result -------------------------------------------------------------
