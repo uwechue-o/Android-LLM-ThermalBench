@@ -47,6 +47,14 @@ TITLE = _content.TITLE
 VERSION = _content.VERSION
 OUTPUT_NAME = getattr(_content, "OUTPUT_NAME", "ThermalBench-Developer-Manual.pdf")
 RUNNING_HEAD = getattr(_content, "RUNNING_HEAD", "ThermalBench — Developer Manual")
+COVER_LEAD = getattr(
+    _content, "COVER_LEAD",
+    "A developer's guide to the architecture, the measurement method, and the "
+    "day-to-day operation of ThermalBench.")
+COVER_META = getattr(
+    _content, "COVER_META",
+    [["Audience", "Engineers building on, running, or reviewing ThermalBench"],
+     ["Source", "GUIDE.md, and the code it describes"]])
 
 INK = colors.HexColor("#12181F")
 MUTED = colors.HexColor("#5A6672")
@@ -298,16 +306,12 @@ def cover(story):
     story.append(t)
     story.append(Spacer(1, 9 * mm))
 
-    story.append(Paragraph(
-        "A developer's guide to the architecture, the measurement method, and the "
-        "day-to-day operation of ThermalBench.", ST["lead"]))
+    story.append(Paragraph(COVER_LEAD, ST["lead"]))
     story.append(Spacer(1, 34 * mm))
 
     meta = Table(
         [["Version", VERSION],
-         ["Generated", date.today().isoformat()],
-         ["Audience", "Engineers building on, running, or reviewing ThermalBench"],
-         ["Source", "GUIDE.md, and the code it describes"]],
+         ["Generated", date.today().isoformat()]] + [list(row) for row in COVER_META],
         colWidths=[30 * mm, 110 * mm], hAlign="LEFT")
     meta.setStyle(TableStyle([
         ("FONTNAME", (0, 0), (0, -1), "Helvetica-Bold"),
