@@ -26,6 +26,17 @@ class ThermalZoneSourceTest {
     }
 
     @Test
+    fun `SM8550 battery zones without a level suffix are not temperatures`() {
+        // As an Honor Magic V3 names them: vbat in millivolts, socd a charge figure.
+        assertThat(ThermalZoneSource.isTemperatureZone("vbat", 4.285f)).isFalse()
+        assertThat(ThermalZoneSource.isTemperatureZone("socd", 10f)).isFalse()
+        assertThat(ThermalZoneSource.isTemperatureZone("pm8550b-ibat-lvl0", -0.281f)).isFalse()
+        assertThat(ThermalZoneSource.isTemperatureZone("gpuss-3", 34.2f)).isTrue()
+        assertThat(ThermalZoneSource.isTemperatureZone("rt_battery", 31.1f)).isTrue()
+        assertThat(ThermalZoneSource.isTemperatureZone("hot_pock", 33.908f)).isTrue()
+    }
+
+    @Test
     fun `unpopulated and implausible sensors are dropped`() {
         assertThat(ThermalZoneSource.isTemperatureZone("xo-therm-usr", -40f)).isFalse()
         assertThat(ThermalZoneSource.isTemperatureZone("mmw-pa1-usr", -40f)).isFalse()

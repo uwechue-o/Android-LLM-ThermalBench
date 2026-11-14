@@ -243,7 +243,7 @@ DOCUMENT = [
              "(none, light, moderate, severe and so on), worked out from sensors inside the "
              "chip that the app doesn't get to see. On some phones the tool can read those "
              "sensors directly and records them too. It depends entirely on the phone maker. "
-             "The Pixel 6 allows none, so its results only have the battery figure. The "
+             "The Pixel 6 and the Honor Magic V3 allow none, so their results only have the battery figure. The "
              "OnePlus 8T allows 76, including every processor core, the graphics chip and "
              "three sensors in the case."),
             ("note",
@@ -644,7 +644,7 @@ DOCUMENT = [
              "You can only trust a tool if you know its limits, so here they are."),
 
             ("bullets", [
-                "<b>It often can't see inside the chip.</b> Android has no official way for apps to read the chip's own temperature sensors. The tool tries anyway and records them on phones that allow it, like the OnePlus 8T, but many don't: the Pixel 6 blocks every one. What every phone does give is its own verdict on how hot it is, which is coarser but always there.",
+                "<b>It often can't see inside the chip.</b> Android has no official way for apps to read the chip's own temperature sensors. The tool tries anyway and records them on phones that allow it, like the OnePlus 8T, but many don't: the Pixel 6 and the Honor Magic V3 block every one. What every phone does give is its own verdict on how hot it is, which is coarser but always there.",
                 "<b>Battery temperature isn't chip temperature.</b> It lags by minutes, so the tool only uses it as supporting evidence.",
                 "<b>It won't guess.</b> Any figure a phone declines to report is recorded as unavailable.",
                 "<b>It can't make a phone comparable with itself under different conditions.</b> That's why the rules about starting cool and unplugged are so strict.",

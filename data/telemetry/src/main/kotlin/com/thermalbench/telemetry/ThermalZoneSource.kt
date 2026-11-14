@@ -75,12 +75,14 @@ class ThermalZoneSource @Inject constructor() {
 
         /**
          * Zones that sit under /sys/class/thermal but measure something else:
-         * `soc` is the battery charge in percent, `*-lvl*` zones are battery
-         * current-limit (bcl), current (ibat) and voltage (vbat, vph) trip
-         * levels. Their values fall inside the plausible range, so the name is
-         * the only way to tell them from a thermometer.
+         * `soc` and `socd` are battery charge figures, `vbat` is the battery
+         * voltage in millivolts (SM8550 kernels, e.g. Honor Magic V3), and
+         * `*-lvl*` zones are battery current-limit (bcl), current (ibat) and
+         * voltage (vbat, vph) trip levels. Their values fall inside the
+         * plausible range, so the name is the only way to tell them from a
+         * thermometer.
          */
-        private val NON_TEMPERATURE = Regex("""^soc$|-lvl\d*$""", RegexOption.IGNORE_CASE)
+        private val NON_TEMPERATURE = Regex("""^(soc|socd|vbat)$|-lvl\d*$""", RegexOption.IGNORE_CASE)
 
         /** Whether a zone, read once at discovery, is a temperature sensor worth recording. */
         fun isTemperatureZone(name: String, celsius: Float): Boolean =
