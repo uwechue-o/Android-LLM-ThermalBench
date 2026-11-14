@@ -939,7 +939,11 @@ DOCUMENT = [
              "<font face='Courier'>ThermalZoneSource.isTemperatureZone</font> therefore also "
              "drops <font face='Courier'>soc</font>, any name ending in "
              "<font face='Courier'>-lvl</font> plus digits, and any zone reading exactly -40 "
-             "at discovery: 14 zones on this phone. Results saved before that change still "
+             "at discovery: 14 zones on this phone. Every reading during the run goes through "
+             "the same check, because a zone can pass discovery and then turn into a "
+             "sentinel: four OnePlus 8T modem zones (<font face='Courier'>modem-mmw*-usr</font>, "
+             "<font face='Courier'>modem-streamer-usr</font>) read -273 °C while the modem is "
+             "idle, and those readings are left out. Results saved before that change still "
              "contain them. For those, and for vendors whose naming the rule doesn't know yet, "
              "pick sensors by name before you plot or average them, and treat a zone you don't "
              "recognise as unknown, not as a temperature."),

@@ -46,8 +46,14 @@ class ThermalZoneSource @Inject constructor() {
     suspend fun read(): List<SensorTemperature>? = withContext(Dispatchers.IO) {
         if (zones.isEmpty()) return@withContext null
         // A zone that stops answering mid-run is left out of that reading
-        // rather than reported as a temperature it did not give.
-        zones.mapNotNull { zone -> readCelsius(zone.temp)?.let { SensorTemperature(zone.name, it) } }
+        // rather than reported as a temperature it did not give. So is one
+        // that answers with a sentinel: OnePlus 8T modem zones pass discovery,
+        // then report -273 while the modem is idle.
+        zones.mapNotNull { zone ->
+            readCelsius(zone.temp)
+                ?.takeIf { isTemperatureZone(zone.name, it) }
+                ?.let { SensorTemperature(zone.name, it) }
+        }
             .ifEmpty { null }
     }
 

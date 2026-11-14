@@ -30,5 +30,6 @@ class ThermalZoneSourceTest {
         assertThat(ThermalZoneSource.isTemperatureZone("xo-therm-usr", -40f)).isFalse()
         assertThat(ThermalZoneSource.isTemperatureZone("mmw-pa1-usr", -40f)).isFalse()
         assertThat(ThermalZoneSource.isTemperatureZone("cpu-0-0-usr", 999f)).isFalse()
+        assertThat(ThermalZoneSource.isTemperatureZone("modem-mmw0-usr", -273f)).isFalse()
     }
 }
