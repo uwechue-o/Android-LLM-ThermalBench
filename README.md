@@ -35,18 +35,18 @@ and measures how much of its peak speed the phone actually keeps.
 Everything else, from installing and running a benchmark to reading the results
 and the measurement method, is in the two PDFs:
 
-- **[ThermalBench Guide](DOCS/ThermalBench-Guide.pdf):** a plain-language guide
+- **[ThermalBench Guide](DOCS/ThermalBench-Guide_02.pdf):** a plain-language guide
   to what the tool measures, how to run it and how to read the results.
-- **[Developer Manual](DOCS/ThermalBench-Developer-Manual.pdf):** the rationale,
+- **[Developer Manual](DOCS/ThermalBench-Developer-Manual_02.pdf):** the rationale,
   the measurement method, the architecture, and how to operate every part of
   the tool.
 
-Both are built from `DOCS/guide_content.py` and `DOCS/manual_content.py`
+Both are built from `DOCS/guide_content_02.py` and `DOCS/manual_content_02.py`
 (needs `reportlab`):
 
 ```
-python DOCS/build_manual.py
-THERMALBENCH_CONTENT=guide_content python DOCS/build_manual.py
+THERMALBENCH_CONTENT=manual_content_02 python DOCS/build_manual.py
+THERMALBENCH_CONTENT=guide_content_02 python DOCS/build_manual.py
 ```
 
 ### Licence
