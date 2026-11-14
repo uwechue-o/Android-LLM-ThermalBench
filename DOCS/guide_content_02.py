@@ -240,16 +240,19 @@ DOCUMENT = [
              "now."),
             ("p",
              "The phone's heat level isn't a temperature at all. It's the phone's own verdict "
-             "(none, light, moderate, severe and so on), worked out from sensors inside the "
-             "chip that the app doesn't get to see. On some phones the tool can read those "
+             "(none, light, moderate, severe and so on), worked out from sensors in the chip "
+             "and the case that the app doesn't get to see. On some phones the tool can read those "
              "sensors directly and records them too. It depends entirely on the phone maker. "
-             "The Pixel 6 and the Honor Magic V3 allow none, so their results only have the battery figure. The "
+             "The Pixel 6 and the Honor Magic V3 allow none, so their results only have the "
+             "battery figure. A Samsung Galaxy Tab S7+ allows 52, though none in its case. The "
              "OnePlus 8T allows 76, including every processor core, the graphics chip and "
              "three sensors in the case."),
             ("note",
              "The OnePlus shows how far behind the battery lags. In a twelve-second test its "
              "processor cores went from about 40 °C to 62 °C. The battery went from 30.7 °C "
-             "to 30.8 °C."),
+             "to 30.8 °C. On the Samsung tablet, a test of just over a minute took its "
+             "processor cores from about 50 °C to 76 °C, while the battery went from 27.3 °C "
+             "to 27.5 °C."),
         ],
     },
 
@@ -439,6 +442,14 @@ DOCUMENT = [
              "seconds it reads out the current figure, for example: <i>\"Current thermal "
              "margin is 0.27.\"</i> Once that number reaches 0.50, the phone is ready. It also "
              "tells you when it's halfway there, and when it's cool enough to begin."),
+            ("note",
+             "On a Samsung Galaxy Tab S7+, that number may never get there. Unplugged, screen "
+             "off, with its processor back down to room temperature, the tablet still reported "
+             "0.34 for more than ten minutes. It seems to judge by the temperature of its "
+             "case, which cools slowly, rather than by the chip. If your Samsung sits below "
+             "0.50 for a long time, the tool stops waiting after 15 minutes, runs anyway and "
+             "labels the result <b>Conditions not met</b>. Starting in a cooler room is the "
+             "only thing likely to help."),
             ("p",
              "The voice plays even with the ringer on silent. It follows the media volume, so "
              "if you can't hear it, turn that up. The same reading also appears in the "

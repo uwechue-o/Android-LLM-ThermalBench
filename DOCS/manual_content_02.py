@@ -490,6 +490,41 @@ DOCUMENT = [
              "conditions listed in the document. The leaderboard refuses such a result, the "
              "comparison tables leave it out by default, and the app shows a red banner. The "
              "override changes what the tool does. It never changes what the tool reports."),
+            ("note",
+             "The override doesn't skip the wait. The gate still waits for the full "
+             "<font face='Courier'>maxWaitForPreconditions</font>, and if every condition holds "
+             "in that time the run is <font face='Courier'>VALID</font> after all. The override "
+             "only decides what happens when time runs out: without it the harness fails and "
+             "measures nothing, with it the run starts and is marked. To bound the wait, add "
+             "<font face='Courier'>-e preconditionTimeoutSeconds 900</font>. Without the "
+             "override, a gate that can't pass costs you the whole wait and gives you nothing "
+             "to show for it."),
+
+            ("h2", "When the gate can't pass: a Samsung tablet"),
+            ("p",
+             "On a Samsung Galaxy Tab S7+ (SM-T970, Snapdragon 865+, Android 13), the headroom "
+             "check may never pass. Unplugged, screen off, CPU cores back down to about 30 °C, "
+             "the platform kept reporting a headroom of 0.66 (a margin of 0.34) for more than "
+             "ten minutes. It had read the same 0.66 at the first answer of an earlier test "
+             "run, with the model loaded and the CPU cores at 49–66 °C. Chip twice as hot, "
+             "same number."),
+            ("p",
+             "Here's the puzzle. Android's thermal service on that tablet reports three "
+             "temperatures: <font face='Courier'>AP</font> (the processor) at 27.5–29.5 °C, "
+             "<font face='Courier'>BAT</font> at 28.7 °C and <font face='Courier'>SKIN</font> at "
+             "31.7–32.4 °C. None of them is hot. Samsung's thermal HAL publishes no thresholds "
+             "(<font face='Courier'>dumpsys thermalservice</font> lists none), so you can't see "
+             "from outside how it turns those readings into headroom. What you can see is that "
+             "the number doesn't follow the chip. My working guess is that it follows "
+             "<font face='Courier'>SKIN</font>, which is slow to cool, and that a margin of 0.5 "
+             "needs a case temperature close to the room's. I haven't confirmed that."),
+            ("warn",
+             "On this tablet, and possibly other Samsung devices, expect the headroom check to hold the gate for a long time, "
+             "possibly indefinitely. Run with <font face='Courier'>-e ignorePreconditions true "
+             "-e preconditionTimeoutSeconds 900</font>, so the run still starts as "
+             "<font face='Courier'>VALID</font> if the tablet cools enough, and otherwise "
+             "starts at the timeout marked <font face='Courier'>PRECONDITIONS_UNMET</font>, with "
+             "the margin it reached recorded in the document."),
 
             ("h2", "Handling unavailable signals"),
             ("p",
@@ -930,6 +965,22 @@ DOCUMENT = [
              "the battery. In a twelve-second llama.cpp CPU run, the CPU cores went from about "
              "40 °C to 62 °C while <font face='Courier'>battery</font> moved from 30.7 to "
              "30.8 °C. That's the lag in the battery reading, in two numbers."),
+            ("p",
+             "The Samsung Galaxy Tab S7+ (SM-T970, Snapdragon 865+, Android 13) also lets the "
+             "app in. It lists 86 zones, 27 of which refuse to be read (all 16 "
+             "<font face='Courier'>modem-*</font> zones, the eight <font face='Courier'>pm8150b</font> "
+             "levels, <font face='Courier'>soc</font>, <font face='Courier'>usb-therm</font> and "
+             "<font face='Courier'>wpc-therm</font>). The filter drops seven more: the "
+             "<font face='Courier'>pm8150l</font> voltage levels, which read 3737, its "
+             "<font face='Courier'>bcl</font> levels at -274, and <font face='Courier'>xo-therm-usr</font> "
+             "at -40. The tool records 52: every CPU core, the GPU, NPU, DSP and DDR, the "
+             "power-management chips, an <font face='Courier'>ac</font> sensor and "
+             "<font face='Courier'>battery</font>. There are no case sensors. CPU frequency is "
+             "readable; the GPU clock isn't. In a 74-second test run of Gemma 3 1B on the CPU, "
+             "the big cores went from 49–66 °C to 75–77 °C (one "
+             "<font face='Courier'>-step</font> zone reached 81 °C), the GPU zone from 37 to "
+             "62 °C and the PMIC from 41 to 58 °C, and thermal status went from NONE to "
+             "MODERATE. The battery went from 27.3 to 27.5 °C."),
             ("warn",
              "Not every thermal zone is a thermometer. On the OnePlus 8T, "
              "<font face='Courier'>soc</font> is the battery charge in percent (it read 99, and "
