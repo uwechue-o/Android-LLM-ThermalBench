@@ -244,7 +244,7 @@ DOCUMENT = [
              "chip that the app doesn't get to see. On some phones the tool can read those "
              "sensors directly and records them too. It depends entirely on the phone maker. "
              "The Pixel 6 allows none, so its results only have the battery figure. The "
-             "OnePlus 8T allows 90, including every processor core, the graphics chip and "
+             "OnePlus 8T allows 76, including every processor core, the graphics chip and "
              "three sensors in the case."),
             ("note",
              "The OnePlus shows how far behind the battery lags. In a twelve-second test its "

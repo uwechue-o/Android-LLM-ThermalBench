@@ -902,7 +902,8 @@ DOCUMENT = [
              "<font face='Courier'>ThermalZoneSource</font> goes to the kernel. It walks "
              "<font face='Courier'>/sys/class/thermal</font>, keeps every "
              "<font face='Courier'>thermal_zone*</font> whose <font face='Courier'>temp</font> "
-             "file is readable and reads between -40 and 150 °C when first checked, and records each one by the "
+             "file is readable and passes <font face='Courier'>isTemperatureZone</font> when "
+             "first checked (see the warning below), and records each one by the "
              "vendor's own name (CPU clusters, GPU, modem, skin, battery) in "
              "<font face='Courier'>IterationSample.sensorTemperatures</font>. Most kernels "
              "report millidegrees; a few report whole degrees, and the reader handles both."),
@@ -916,7 +917,8 @@ DOCUMENT = [
              "can't pass for a cold one."),
             ("p",
              "The OnePlus 8T (Snapdragon 865, Android 14) sits at the other extreme: the app "
-             "reads 90 zones on every iteration. They include each CPU core "
+             "can read 90 zones, and records the 76 that are temperatures on every iteration. "
+             "They include each CPU core "
              "(<font face='Courier'>cpu-0-*-usr</font>, <font face='Courier'>cpu-1-*-usr</font>), "
              "the GPU (<font face='Courier'>gpuss-0-usr</font>, "
              "<font face='Courier'>gpuss-1-usr</font>), the NPU, DSP and DDR, the modem, three "
@@ -932,10 +934,15 @@ DOCUMENT = [
              "(4.185), the <font face='Courier'>bcl</font>, <font face='Courier'>ibat</font> and "
              "<font face='Courier'>vph</font> levels are limiter states that sit at 0, and "
              "<font face='Courier'>xo-therm-usr</font> and <font face='Courier'>mmw-pa1-usr</font> "
-             "report exactly -40, the floor of an unpopulated sensor. All of them pass the "
-             "-40 to 150 °C plausibility check, so they're recorded alongside the real ones. "
-             "Pick sensors by name before you plot or average them, and treat a zone you "
-             "don't recognise as unknown, not as a temperature."),
+             "report exactly -40, the floor of an unpopulated sensor. Every one of those values "
+             "falls inside -40 to 150 °C, so a range check alone lets them through. "
+             "<font face='Courier'>ThermalZoneSource.isTemperatureZone</font> therefore also "
+             "drops <font face='Courier'>soc</font>, any name ending in "
+             "<font face='Courier'>-lvl</font> plus digits, and any zone reading exactly -40 "
+             "at discovery: 14 zones on this phone. Results saved before that change still "
+             "contain them. For those, and for vendors whose naming the rule doesn't know yet, "
+             "pick sensors by name before you plot or average them, and treat a zone you don't "
+             "recognise as unknown, not as a temperature."),
         ],
     },
 

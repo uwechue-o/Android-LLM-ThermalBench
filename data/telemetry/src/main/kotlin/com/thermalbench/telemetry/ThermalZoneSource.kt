@@ -34,7 +34,7 @@ class ThermalZoneSource @Inject constructor() {
                 // Readable now, and a plausible temperature: some zones exist
                 // only as placeholders and report 0 or a sentinel forever.
                 val celsius = readCelsius(temp) ?: return@mapNotNull null
-                if (celsius !in PLAUSIBLE_CELSIUS) return@mapNotNull null
+                if (!isTemperatureZone(name, celsius)) return@mapNotNull null
                 Zone(name, temp)
             }
             .orEmpty()
@@ -57,11 +57,29 @@ class ThermalZoneSource @Inject constructor() {
         return if (abs(raw) >= MILLI_THRESHOLD) raw / MILLI else raw.toFloat()
     }
 
-    private companion object {
-        const val THERMAL_ROOT = "/sys/class/thermal"
-        val ZONE_DIR = Regex("thermal_zone[0-9]+")
-        const val MILLI = 1000f
-        const val MILLI_THRESHOLD = 1000L
-        val PLAUSIBLE_CELSIUS = -40f..150f
+    internal companion object {
+        private const val THERMAL_ROOT = "/sys/class/thermal"
+        private val ZONE_DIR = Regex("thermal_zone[0-9]+")
+        private const val MILLI = 1000f
+        private const val MILLI_THRESHOLD = 1000L
+        private val PLAUSIBLE_CELSIUS = -40f..150f
+
+        /** The reading an unpopulated sensor reports forever on Qualcomm kernels. */
+        private const val UNPOPULATED_CELSIUS = -40f
+
+        /**
+         * Zones that sit under /sys/class/thermal but measure something else:
+         * `soc` is the battery charge in percent, `*-lvl*` zones are battery
+         * current-limit (bcl), current (ibat) and voltage (vbat, vph) trip
+         * levels. Their values fall inside the plausible range, so the name is
+         * the only way to tell them from a thermometer.
+         */
+        private val NON_TEMPERATURE = Regex("""^soc$|-lvl\d*$""", RegexOption.IGNORE_CASE)
+
+        /** Whether a zone, read once at discovery, is a temperature sensor worth recording. */
+        fun isTemperatureZone(name: String, celsius: Float): Boolean =
+            celsius in PLAUSIBLE_CELSIUS &&
+                celsius != UNPOPULATED_CELSIUS &&
+                !NON_TEMPERATURE.containsMatchIn(name)
     }
 }
