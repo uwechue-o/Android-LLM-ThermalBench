@@ -866,6 +866,8 @@ DOCUMENT = [
                  "Universal. Gated on, because charging is a heat source."],
                 ["CPU frequency", "/sys/…/scaling_cur_freq",
                  "Vendor dependent and increasingly restricted."],
+                ["Sensor temps", "/sys/class/thermal/thermal_zone*",
+                 "Vendor SELinux decides. Recorded per iteration where readable; null otherwise."],
                 ["Hardware temps", "HardwarePropertiesManager",
                  "Needs device-owner or system app. Not designed around."],
                 ["Memory", "Debug.MemoryInfo, /proc/self/statm",
@@ -887,6 +889,33 @@ DOCUMENT = [
              "kitchen. If the platform reports a thermal status this tool does not recognise, "
              "it becomes <font face='Courier'>UNKNOWN</font> and blocks the run instead of "
              "being optimistically read as cold."),
+
+            ("h2", "Which temperatures, exactly"),
+            ("p",
+             "Only one reading in degrees is guaranteed on every phone: the battery's, from "
+             "<font face='Courier'>BatteryManager.EXTRA_TEMPERATURE</font> in tenths of a "
+             "degree. It's what the \"Battery °C\" panel on every chart shows. Thermal status "
+             "and headroom aren't temperatures at all. They're the vendor's verdict, computed "
+             "from sensors the app never sees."),
+            ("p",
+             "Android gives apps no API for the individual sensors, so "
+             "<font face='Courier'>ThermalZoneSource</font> goes to the kernel. It walks "
+             "<font face='Courier'>/sys/class/thermal</font>, keeps every "
+             "<font face='Courier'>thermal_zone*</font> whose <font face='Courier'>temp</font> "
+             "file is readable and plausible (between -40 and 150 °C; placeholder zones that "
+             "report 0 or a sentinel forever are dropped), and records each one by the "
+             "vendor's own name (CPU clusters, GPU, modem, skin, battery) in "
+             "<font face='Courier'>IterationSample.sensorTemperatures</font>. Most kernels "
+             "report millidegrees; a few report whole degrees, and the reader handles both."),
+            ("note",
+             "Whether any of this works is the vendor's call, made in its SELinux policy. On "
+             "the Pixel 6 the app can't even list <font face='Courier'>/sys/class/thermal</font> "
+             "(<i>Permission denied</i>), so every Pixel 6 result in this manual has "
+             "<font face='Courier'>sensorTemperatures: null</font>. The Pixel 6 doesn't expose "
+             "its GPU clock to apps either. Readable zones on other phones haven't been "
+             "checked yet. A phone that blocks every zone records "
+             "<font face='Courier'>null</font>, never an empty list, so a locked-down phone "
+             "can't pass for a cold one."),
         ],
     },
 

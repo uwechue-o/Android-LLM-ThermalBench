@@ -221,6 +221,7 @@ DOCUMENT = [
                 "How long the phone took to produce its first word each time. This creeps upward as the phone heats.",
                 "The phone's own reported heat level, sampled steadily and also caught the instant it changes.",
                 "Battery level and battery temperature.",
+                "The temperature of each chip sensor (processor, graphics, case and so on), on phones that allow apps to read them.",
                 "How hard the processor cores are running, on phones that will say.",
                 "Memory use.",
             ]),
@@ -229,6 +230,20 @@ DOCUMENT = [
              "The tool keeps two records of heat on purpose. One is a steady sample at a fixed "
              "rhythm, and that's what the graph is drawn from. The other catches the exact "
              "moment the phone changed its behaviour, which regular sampling would blur."),
+
+            ("h2", "Which temperature, exactly?"),
+            ("p",
+             "The only temperature every phone reports to an app is the battery's, and that's "
+             "the one on the charts. Think of the battery as a big, slow lump sitting next to "
+             "the chip. It warms up minutes after the chip does and never gets as hot, so it "
+             "tells you how much heat soaked into the phone, not how hot the chip is right "
+             "now."),
+            ("p",
+             "The phone's heat level isn't a temperature at all. It's the phone's own verdict "
+             "(none, light, moderate, severe and so on), worked out from sensors inside the "
+             "chip that the app doesn't get to see. On some phones the tool can read those "
+             "sensors directly and records them too. The Pixel 6 doesn't allow it, so its "
+             "results only have the battery figure."),
         ],
     },
 
@@ -623,7 +638,7 @@ DOCUMENT = [
              "You can only trust a tool if you know its limits, so here they are."),
 
             ("bullets", [
-                "<b>It can't see inside the chip.</b> Android only lets system software read detailed internal temperatures. The tool uses the heat level the phone reports about itself, which is coarser but available on every phone.",
+                "<b>It often can't see inside the chip.</b> Android has no official way for apps to read the chip's own temperature sensors. The tool tries anyway and records them on phones that allow it, but many don't: the Pixel 6 blocks every one. What every phone does give is its own verdict on how hot it is, which is coarser but always there.",
                 "<b>Battery temperature isn't chip temperature.</b> It lags by minutes, so the tool only uses it as supporting evidence.",
                 "<b>It won't guess.</b> Any figure a phone declines to report is recorded as unavailable.",
                 "<b>It can't make a phone comparable with itself under different conditions.</b> That's why the rules about starting cool and unplugged are so strict.",
