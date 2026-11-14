@@ -82,6 +82,7 @@ class JsonResultCodecTest {
             minDecodeTokensPerSecond = 14.2,
             batteryDrainPercent = 11,
             batteryTemperatureRiseDeciC = 11,
+            throttledBeforeMeasurement = true,
         )
         val conditions = DeviceConditions(500L, ThermalStatus.NONE, 0.3f, 80, false, false, 310)
         return BenchmarkResult(
@@ -223,5 +224,13 @@ class JsonResultCodecTest {
         val decoded = codec.decodeResult(v1)
         assertThat(decoded.iterations.first().gpuFrequencyKhz).isNull()
         assertThat(decoded.iterations.first().sensorTemperatures).isNull()
+    }
+
+    @Test
+    fun `a document from before the warm-up throttle flag loads as not flagged`() {
+        val text = codec.encodeResult(sampleResult())
+        assertThat(text).contains("\"throttledBeforeMeasurement\":true")
+        val older = text.replace(""","throttledBeforeMeasurement":true""", "")
+        assertThat(codec.decodeResult(older).profile!!.throttledBeforeMeasurement).isFalse()
     }
 }
