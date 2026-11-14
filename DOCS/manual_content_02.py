@@ -1158,6 +1158,43 @@ DOCUMENT = [
              "PRECONDITIONS_UNMET, and the screen-on run adds the display's own heat. What the "
              "pair does show is that on this phone, a screen-off result measures the power "
              "manager, not the GPU. Repeat both from a cold start before you quote a figure."),
+
+            ("h2", "A third device that throttles before measuring starts: Galaxy Tab S7+"),
+            ("p",
+             "Same model file, prompt and MediaPipe CPU backend, 150 measured answers, run "
+             "headless over Wi-Fi adb with the tablet unplugged and the screen off. The run is "
+             "<font face='Courier'>PRECONDITIONS_UNMET</font> for one reason only: the headroom "
+             "margin that never left 0.34 (chapter 6)."),
+            ("figure", "three-devices-cpu.png",
+             "Gemma 3 1B on the CPU of three devices. The Galaxy Tab S7+ holds 19.2 to 19.7 "
+             "tok/s for 36 minutes and warms its battery by 0.6 °C. It ends 8% faster than the "
+             "Honor (18.3) and 39% faster than the Pixel (14.2). It was already at thermal "
+             "status SEVERE when its first measured answer began."),
+            ("p",
+             "Across all 150 answers the tablet stays between 18.1 and 20.6 tok/s (median "
+             "19.3), and its battery goes from 28.8 to 29.4 °C, against 6.0 °C on the Honor "
+             "and 7.9 °C on the Pixel. It used 8% of its battery. A four-year-old chip "
+             "finishing first looks odd until you read the sensors."),
+            ("p",
+             "Thermal status went from NONE to MODERATE 16 seconds into the run, during the "
+             "second warm-up answer, and reached SEVERE 33 seconds into the measured answers. "
+             "It stayed there to the end. From minute 9, the hottest big core sat between 75 "
+             "and 83 °C. Sampled at the start of each answer, the prime core ran at a median "
+             "845 MHz of its 3.09 GHz, and the gold cluster at 1.17 of 2.42 GHz. So the tablet "
+             "clamps its clocks hard and early to hold the cores at a fixed temperature, and "
+             "its large chassis spreads the rest, which is why the battery barely moves. It "
+             "trades a high opening speed for one it can keep. The phones do it later and "
+             "less, and pay in heat."),
+            ("warn",
+             "<b>Read the tablet's retention ratio of 0.98 with care.</b> It's correct for "
+             "the measured window, but the throttling happened during the 43-second warm-up, "
+             "which the analysis ignores. The warm-up answers ran at 20.3, 19.5 and 18.5 tok/s. "
+             "A 74-second test run earlier, from a less heat-soaked start, opened at 25.6. "
+             "Against that, the tablet keeps about 77%, close to the Honor's 76%. The profile "
+             "does give it away: <font face='Courier'>iterationsToFirstThrottle</font> is 0 and "
+             "<font face='Courier'>timeToFirstThrottleMillis</font> is 16397. When either "
+             "shows throttling before the first measured answer, treat the peak, and so the "
+             "retention ratio, as an upper bound. I'd like the analysis to flag this itself."),
         ],
     },
 

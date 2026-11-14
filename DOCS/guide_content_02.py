@@ -581,6 +581,28 @@ DOCUMENT = [
              "shouldn't quote either speed as the phone's figure until the pair has been "
              "repeated from a cool start."),
 
+            ("h2", "A tablet that slows down before you start counting"),
+            ("p",
+             "The same test on a 2020 Samsung Galaxy Tab S7+, alongside the two phones."),
+            ("figure", "three-devices-cpu.png",
+             "Gemma 3 1B on the main processor of three devices, unplugged with the screen "
+             "off. The tablet holds about 19.5 tokens a second for 36 minutes and warms its "
+             "battery by only 0.6 °C. After half an hour it's the fastest of the three."),
+            ("p",
+             "The tablet's line is almost perfectly flat, and it finishes ahead of a phone "
+             "four years newer. How? It slows itself down within the first 16 seconds, much "
+             "harder and much earlier than the phones, and keeps its processor at a steady "
+             "75–83 °C from then on. Its big case soaks up what's left, so the battery hardly "
+             "warms. It gives up some opening speed to get a pace it can keep."),
+            ("note",
+             "That early slowdown fools the headline number. The tablet's result says it "
+             "kept 98% of its speed, because it had already slowed down during the three "
+             "warm-up answers the tool throws away. A short test from a cooler start opened at "
+             "25.6 tokens a second; measured from there, it kept about 77%. When a result "
+             "shows the phone slowing down before the first measured answer, read Retained as "
+             "a best case. This run is also labelled <b>Conditions not met</b>, because the "
+             "tablet never passed the start check (see Running a measurement)."),
+
             ("h2", "The trust label"),
             ("p",
              "Every result carries one of three labels, shown prominently, because a number "
