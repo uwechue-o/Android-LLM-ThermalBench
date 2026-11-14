@@ -902,8 +902,7 @@ DOCUMENT = [
              "<font face='Courier'>ThermalZoneSource</font> goes to the kernel. It walks "
              "<font face='Courier'>/sys/class/thermal</font>, keeps every "
              "<font face='Courier'>thermal_zone*</font> whose <font face='Courier'>temp</font> "
-             "file is readable and plausible (between -40 and 150 °C; placeholder zones that "
-             "report 0 or a sentinel forever are dropped), and records each one by the "
+             "file is readable and reads between -40 and 150 °C when first checked, and records each one by the "
              "vendor's own name (CPU clusters, GPU, modem, skin, battery) in "
              "<font face='Courier'>IterationSample.sensorTemperatures</font>. Most kernels "
              "report millidegrees; a few report whole degrees, and the reader handles both."),
@@ -912,10 +911,31 @@ DOCUMENT = [
              "the Pixel 6 the app can't even list <font face='Courier'>/sys/class/thermal</font> "
              "(<i>Permission denied</i>), so every Pixel 6 result in this manual has "
              "<font face='Courier'>sensorTemperatures: null</font>. The Pixel 6 doesn't expose "
-             "its GPU clock to apps either. Readable zones on other phones haven't been "
-             "checked yet. A phone that blocks every zone records "
+             "its GPU clock to apps either. A phone that blocks every zone records "
              "<font face='Courier'>null</font>, never an empty list, so a locked-down phone "
              "can't pass for a cold one."),
+            ("p",
+             "The OnePlus 8T (Snapdragon 865, Android 14) sits at the other extreme: the app "
+             "reads 90 zones on every iteration. They include each CPU core "
+             "(<font face='Courier'>cpu-0-*-usr</font>, <font face='Courier'>cpu-1-*-usr</font>), "
+             "the GPU (<font face='Courier'>gpuss-0-usr</font>, "
+             "<font face='Courier'>gpuss-1-usr</font>), the NPU, DSP and DDR, the modem, three "
+             "case sensors (<font face='Courier'>shell_front</font>, "
+             "<font face='Courier'>shell_frame</font>, <font face='Courier'>shell_back</font>) and "
+             "the battery. In a twelve-second llama.cpp CPU run, the CPU cores went from about "
+             "40 °C to 62 °C while <font face='Courier'>battery</font> moved from 30.7 to "
+             "30.8 °C. That's the lag in the battery reading, in two numbers."),
+            ("warn",
+             "Not every thermal zone is a thermometer. On the OnePlus 8T, "
+             "<font face='Courier'>soc</font> is the battery charge in percent (it read 99, and "
+             "86 in a later run), <font face='Courier'>pm8150b-vbat-lvl*</font> is a voltage "
+             "(4.185), the <font face='Courier'>bcl</font>, <font face='Courier'>ibat</font> and "
+             "<font face='Courier'>vph</font> levels are limiter states that sit at 0, and "
+             "<font face='Courier'>xo-therm-usr</font> and <font face='Courier'>mmw-pa1-usr</font> "
+             "report exactly -40, the floor of an unpopulated sensor. All of them pass the "
+             "-40 to 150 °C plausibility check, so they're recorded alongside the real ones. "
+             "Pick sensors by name before you plot or average them, and treat a zone you "
+             "don't recognise as unknown, not as a temperature."),
         ],
     },
 
